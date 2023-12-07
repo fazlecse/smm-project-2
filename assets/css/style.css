@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Author        :
 Author Uri    :
@@ -921,6 +920,28 @@ Reusable style section start
     border: none !important;
   }
 }
+.cmn-box3-item:nth-child(1) .cmn-box3 {
+  background-color: hsl(var(--secondary)/0.1);
+}
+
+.cmn-box3-item:nth-child(4) .cmn-box3 {
+  background-color: hsl(var(--secondary)/0.1);
+}
+
+.cmn-box3 {
+  text-align: center;
+  padding: 20px;
+  background-color: hsl(var(--base)/0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cmn-box3 .icon-area {
+  font-size: 35px;
+  color: var(--primary-color);
+}
+
 .text-underline {
   position: relative;
   z-index: 1;
@@ -3025,17 +3046,6 @@ Feature section end
   padding: 10px;
   border-radius: 5px;
 }
-.about-section .about-image-area .img1 {
-  rotate: 2deg;
-  width: 90%;
-  max-width: 600px;
-}
-.about-section .about-image-area .img2 {
-  rotate: -3deg;
-  width: 90%;
-  max-width: 40%;
-  margin-left: auto;
-}
 .about-section .about-content .item-list-container {
   display: flex;
   flex-direction: column;
@@ -3075,9 +3085,26 @@ About section end
 /*----------------------------------------------
 06. Service section start
 ----------------------------------------------*/
+.bg-img-overlay {
+  background-image: url(../img/background/bg_img2.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
 .service-section {
+  position: relative;
   background-color: var(--bg-color2);
   color: var(--white);
+}
+.service-section .service-section-inner {
+  position: relative;
+  z-index: 1;
 }
 .service-section .section-title {
   color: var(--white);
@@ -3092,323 +3119,54 @@ Service section end
 /*----------------------------------------------
 06. Why Choose us section start
 ----------------------------------------------*/
-.why-choose-us-thumbs img {
-  border-radius: 25px;
+.rotate-group-images .img1 {
+  rotate: 2deg;
+  width: 90%;
+  max-width: 600px;
+}
+.rotate-group-images .img2 {
+  rotate: -3deg;
+  width: 90%;
+  max-width: 40%;
+  margin-left: auto;
+}
+
+.why-choose-us-thumbs .image-area {
+  position: relative;
+  height: 100%;
+}
+.why-choose-us-thumbs .image-area img {
+  background-color: var(--white);
+  box-shadow: var(--shadow2);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /*----------------------------------------------
 Why Choose us section end
 ----------------------------------------------*/
 /*----------------------------------------------
+00. Achivement section start
+----------------------------------------------*/
+.achivement-section {
+  background-image: linear-gradient(290deg, hsl(var(--base)/0.1) 31%, var(--white) 95%);
+}
+
+/*----------------------------------------------
+Achivement section end
+----------------------------------------------*/
+/*----------------------------------------------
 07. How it works section start
 ----------------------------------------------*/
 .how-it-works-thumbs img {
-  border-radius: 25px;
+  background-color: var(--white);
+  box-shadow: var(--shadow2);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /*----------------------------------------------
 How it works section end
-----------------------------------------------*/
-/*----------------------------------------------
-14. Review section start
-----------------------------------------------*/
-.average-review .card-box {
-  text-align: center;
-}
-.average-review .card-box i {
-  color: var(--orange);
-  font-size: 14px;
-}
-.average-review .index {
-  display: inline-block;
-  width: 20px;
-}
-.average-review .progress {
-  width: 100%;
-  height: 10px;
-}
-.average-review .progress .progress-bar {
-  background: var(--primary-color);
-}
-
-.all-review {
-  margin-top: 50px;
-  color: var(--heading-color);
-}
-.all-review .review-box {
-  display: flex;
-  overflow: hidden;
-  margin-bottom: 30px;
-  gap: 15px;
-}
-.all-review .review-box .img-box {
-  width: 50px;
-  height: 50px;
-}
-.all-review .review-box .img-box img {
-  border-radius: 50px;
-  width: 100%;
-  height: 100%;
-}
-.all-review .review-box .name,
-.all-review .review-box .date {
-  margin-bottom: 5px;
-}
-.all-review .review-box .date {
-  font-size: 14px;
-  text-transform: uppercase;
-}
-.all-review .review-box .text-box {
-  width: calc(100% - 50px);
-  margin-left: auto;
-}
-.all-review .review-box .text-box .reply-btn {
-  font-family: "Teko", sans-serif;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
-.all-review .review-box .rating {
-  margin-top: 15px;
-}
-.all-review .review-box .rating i {
-  color: var(--orange);
-  font-size: 14px;
-}
-.all-review .review-box .feedback {
-  display: flex;
-}
-.all-review .review-box .feedback P {
-  font-weight: 500;
-  margin-bottom: 0;
-  margin-right: 15px;
-}
-.all-review .review-box .feedback button {
-  color: var(--heading-color);
-  align-items: center;
-  font-size: 14px;
-  margin: 0 5px;
-  margin-top: -2px;
-}
-.all-review .review-box .feedback button i {
-  font-size: 15px;
-  color: var(--primary-color);
-}
-
-.add-review .rating {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: start;
-}
-.add-review .rating:not(:checked) > input {
-  position: absolute;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-.add-review .rating:not(:checked) > label {
-  cursor: pointer;
-  font-size: 36px;
-  color: var(--body-color);
-}
-.add-review .rating:not(:checked) > label:before {
-  content: "★";
-}
-.add-review .rating > input:checked + label:hover,
-.add-review .rating > input:checked + label:hover ~ label,
-.add-review .rating > input:checked ~ label:hover,
-.add-review .rating > input:checked ~ label:hover ~ label,
-.add-review .rating > label:hover ~ input:checked ~ label {
-  color: var(--orange);
-}
-.add-review .rating:not(:checked) > label:hover,
-.add-review .rating:not(:checked) > label:hover ~ label {
-  color: var(--orange);
-}
-.add-review .rating > input:checked ~ label {
-  color: var(--orange);
-}
-.add-review form .input-box label {
-  font-weight: 500;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-.add-review form .input-box .form-select,
-.add-review form .input-box .form-control {
-  height: 50px;
-  border-radius: 5px;
-  padding: 8px;
-  padding-left: 15px;
-  font-weight: normal;
-  caret-color: var(--primary-color);
-  color: var(--heading-color);
-}
-.add-review form .input-box .form-select::-moz-placeholder, .add-review form .input-box .form-control::-moz-placeholder {
-  color: var(--heading-color);
-}
-.add-review form .input-box .form-select::placeholder,
-.add-review form .input-box .form-control::placeholder {
-  color: var(--heading-color);
-}
-.add-review form .input-box .form-select {
-  background-image: url(../img/icon/downward-arrow.png);
-}
-.add-review form .input-box .form-select option {
-  background: var(--white);
-  color: var(--heading-color);
-}
-.add-review form .input-box textarea.form-control {
-  height: 120px;
-  border-radius: 5px;
-}
-
-/*----------------------------------------------
-Review section end
-----------------------------------------------*/
-/*----------------------------------------------
-15. Posts page start
-----------------------------------------------*/
-.post-page {
-  background-color: var(--bg-color1);
-}
-.post-page .iti {
-  flex: 1;
-}
-.post-page .sidebar-widget-area {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-.post-page .sidebar-widget-area .icon-area {
-  font-size: 50px;
-  color: var(--primary-color);
-}
-.post-page .cmn-list {
-  gap: 10px;
-}
-.post-page .cmn-list .item {
-  display: flex;
-  gap: 10px;
-}
-.post-page .cmn-list .item .icon-area {
-  color: var(--primary-color);
-  font-size: 20px;
-}
-
-/*----------------------------------------------
-Posts page end
-----------------------------------------------*/
-/*----------------------------------------------
-16. pricing section start
-----------------------------------------------*/
-.pricing-section {
-  background-color: var(--bg-color1);
-  position: relative;
-}
-
-.pricing-section-inner {
-  z-index: 1;
-  position: relative;
-}
-
-.pricing-bg {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70%;
-}
-.pricing-bg svg {
-  height: 100%;
-}
-
-.pricing-box {
-  border-radius: 10px;
-  background: var(--white);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-}
-.pricing-box .section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 30px;
-  margin-bottom: 0;
-}
-.pricing-box .section-header .icon-area {
-  width: 55px;
-  height: 55px;
-  background-color: var(--primary-color-opacity-low);
-  border-radius: 5px;
-  color: var(--primary-color);
-  font-size: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pricing-box .section-header .content-area .duration {
-  text-transform: uppercase;
-  font-size: 13px;
-}
-.pricing-box .section-header .price-title {
-  font-size: 36px;
-  color: var(--heading-color);
-  text-transform: capitalize;
-  margin-bottom: 0;
-  font-family: var(--heading-font);
-}
-.pricing-box .section-header .price-title .price {
-  font-weight: 500;
-}
-.pricing-box .section-middle {
-  background-color: var(--primary-color-opacity-low);
-  padding: 10px 30px 10px 30px;
-  border-radius: 0 2px 2px 0;
-  margin-right: 30px;
-}
-.pricing-box .section-middle .title {
-  font-size: 24px;
-  color: var(--heading-color);
-  font-weight: 500;
-  text-transform: capitalize;
-  font-family: var(--heading-font);
-}
-.pricing-box .section-middle .title .price {
-  font-weight: 500;
-  font-size: 40px;
-}
-.pricing-box .section-body {
-  color: var(--heading-color);
-  padding: 30px;
-}
-.pricing-box .section-body .pricing-feature {
-  margin-bottom: 32px;
-}
-.pricing-box .section-body .pricing-feature li i {
-  color: var(--primary-color);
-  margin-right: 10px;
-}
-.pricing-box .section-body .pricing-feature li:not(:last-child) {
-  margin-bottom: 16px;
-}
-.pricing-box .btn-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.rtl .pricing-box .section-middle {
-  margin-right: 0;
-  margin-left: 30px;
-  border-radius: 2px 0 0 2px;
-}
-.rtl .section-body .pricing-feature li i {
-  margin-right: 0;
-  margin-left: 10px;
-}
-
-/*----------------------------------------------
-pricing section end
 ----------------------------------------------*/
 /*----------------------------------------------
 17. Faq section start
@@ -3489,10 +3247,16 @@ Faq end
 09. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-  background-image: url(../img/background/avtar_testimonial2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  position: relative;
+  background-color: var(--bg-color2);
+}
+.testimonial-section .testimonial-section-inner {
+  position: relative;
+  z-index: 1;
+}
+.testimonial-section .section-title,
+.testimonial-section .cmn-para-text {
+  color: var(--white);
 }
 .testimonial-section .testimonial-box {
   position: relative;
@@ -3504,8 +3268,8 @@ Faq end
 }
 .testimonial-section .testimonial-box .testimonial-thumbs {
   position: absolute;
-  right: 20px;
-  top: -25px;
+  left: -20px;
+  top: -20px;
   background-color: var(--white);
   border: 1px solid var(--border-color1);
   padding: 2px;
@@ -3515,6 +3279,9 @@ Faq end
   width: 65px;
   height: 65px;
   border-radius: 4px;
+}
+.testimonial-section .testimonial-box .testimonial-title {
+  margin-left: 45px;
 }
 .testimonial-section .testimonial-box .qoute-icon {
   font-size: 35px;
@@ -3528,6 +3295,7 @@ Faq end
 }
 .testimonial-section .testimonial-carousel .owl-stage-outer {
   padding-top: 50px;
+  padding-left: 30px;
 }
 
 .rtl .testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {

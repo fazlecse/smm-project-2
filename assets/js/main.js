@@ -4,6 +4,7 @@ const preloader = document.getElementById("preloader");
 const preloaderFunction = () => {
     preloader.style.display = "none";
 };
+
 // toggleSideMenu start
 const toggleSideMenu = () => {
     document.body.classList.toggle("toggle-sidebar");
@@ -77,7 +78,7 @@ $(document).ready(function () {
         $('.testimonial-carousel').owlCarousel({
             loop: true,
             autoplay: true,
-            margin: 10,
+            margin: 40,
             nav: false,
             dots: true,
             // rtl: true,
@@ -276,13 +277,12 @@ function copyTextFunc() {
     element.removeChild(storage);
 }
 // Copy text end
-// Highlight editor start
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('pre code').forEach((el) => {
-        hljs.highlightElement(el);
-    });
+
+// achivement section
+$('.achivement-counter').counterUp({
+    delay: 10,
+    time: 1000
 });
-// Highlight editor end
 
 
 
@@ -314,8 +314,6 @@ passwordIcon.addEventListener("click", function () {
 $('#countdown1').countdown('2023/11/05', function (event) {
     $(this).html(event.strftime('<div class="single-coundown"><h5>%H :</h5></div><div class="single-coundown"><h5>%M :</h5></div><div class="single-coundown"><h5>%S</h5></div>'));
 });
-
-
 
 
 // Dark theme start

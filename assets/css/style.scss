@@ -980,6 +980,7 @@ Reusable style section start
 .cmn-box-item:nth-child(2) {
     margin-top: 60px;
 }
+
 .cmn-box-item:nth-child(5) {
     margin-top: 60px;
 }
@@ -1076,6 +1077,38 @@ Reusable style section start
 
 // Responsive cmn box2 end
 // cmn box2 end
+// cmn box3 start
+.cmn-box3-item:nth-child(1) {
+    .cmn-box3 {
+        background-color: hsl(var(--secondary)/.1);
+    }
+}
+
+.cmn-box3-item:nth-child(4) {
+    .cmn-box3 {
+        background-color: hsl(var(--secondary)/.1);
+    }
+}
+
+.cmn-box3 {
+    text-align: center;
+    padding: 20px;
+    background-color: hsl(var(--base)/.1);
+
+
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .icon-area {
+        font-size: 35px;
+        color: var(--primary-color);
+    }
+}
+
+// cmn box3 end
 // Text underline start
 .text-underline {
     position: relative;
@@ -3687,19 +3720,6 @@ Feature section end
             padding: 10px;
             border-radius: 5px;
         }
-
-        .img1 {
-            rotate: 2deg;
-            width: 90%;
-            max-width: 600px;
-        }
-
-        .img2 {
-            rotate: -3deg;
-            width: 90%;
-            max-width: 40%;
-            margin-left: auto;
-        }
     }
 
     .about-content {
@@ -3758,7 +3778,25 @@ About section end
 /*----------------------------------------------
 06. Service section start
 ----------------------------------------------*/
+.bg-img-overlay {
+    background-image: url(../img/background/bg_img2.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
 .service-section {
+    .service-section-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    position: relative;
     background-color: var(--bg-color2);
     color: var(--white);
 
@@ -3778,15 +3816,48 @@ Service section end
 /*----------------------------------------------
 06. Why Choose us section start
 ----------------------------------------------*/
+.rotate-group-images {
+    .img1 {
+        rotate: 2deg;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .img2 {
+        rotate: -3deg;
+        width: 90%;
+        max-width: 40%;
+        margin-left: auto;
+    }
+}
 
 .why-choose-us-thumbs {
-    img {
-        border-radius: 25px;
+    .image-area {
+        position: relative;
+        height: 100%;
+
+        img {
+            background-color: var(--white);
+            box-shadow: var(--shadow2);
+            padding: 10px;
+            border-radius: 5px;
+        }
     }
 }
 
 /*----------------------------------------------
 Why Choose us section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Achivement section start
+----------------------------------------------*/
+.achivement-section {
+    background-image: linear-gradient(290deg, hsl(var(--base)/.1) 31%, var(--white) 95%)
+}
+
+/*----------------------------------------------
+Achivement section end
 ----------------------------------------------*/
 
 
@@ -3796,397 +3867,16 @@ Why Choose us section end
 
 .how-it-works-thumbs {
     img {
-        border-radius: 25px;
+        background-color: var(--white);
+        box-shadow: var(--shadow2);
+        padding: 10px;
+        border-radius: 5px;
     }
 }
 
 /*----------------------------------------------
 How it works section end
 ----------------------------------------------*/
-
-
-
-
-
-
-
-/*----------------------------------------------
-14. Review section start
-----------------------------------------------*/
-.average-review {
-    .card-box {
-        text-align: center;
-
-        i {
-            color: var(--orange);
-            font-size: 14px;
-        }
-    }
-
-    .index {
-        display: inline-block;
-        width: 20px;
-    }
-
-    .progress {
-        width: 100%;
-        height: 10px;
-
-        .progress-bar {
-            background: var(--primary-color);
-        }
-    }
-}
-
-.all-review {
-    margin-top: 50px;
-    color: var(--heading-color);
-
-    .review-box {
-        display: flex;
-        overflow: hidden;
-        margin-bottom: 30px;
-        gap: 15px;
-
-        .img-box {
-            width: 50px;
-            height: 50px;
-
-            img {
-                border-radius: 50px;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .name,
-        .date {
-            margin-bottom: 5px;
-        }
-
-        .date {
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        .text-box {
-            width: calc(100% - 50px);
-            margin-left: auto;
-
-            .reply-btn {
-                font-family: "Teko", sans-serif;
-                color: var(--primary-color);
-                margin-bottom: 15px;
-            }
-        }
-
-        .rating {
-            margin-top: 15px;
-
-            i {
-                color: var(--orange);
-                font-size: 14px;
-            }
-        }
-
-        .feedback {
-            display: flex;
-
-            P {
-                font-weight: 500;
-                margin-bottom: 0;
-                margin-right: 15px;
-            }
-
-            button {
-                color: var(--heading-color);
-                align-items: center;
-                font-size: 14px;
-                margin: 0 5px;
-                margin-top: -2px;
-
-                i {
-                    font-size: 15px;
-                    color: var(--primary-color);
-                }
-            }
-        }
-    }
-}
-
-.add-review {
-
-    .rating {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: start;
-    }
-
-    .rating:not(:checked)>input {
-        position: absolute;
-        appearance: none;
-    }
-
-    .rating:not(:checked)>label {
-        cursor: pointer;
-        font-size: 36px;
-        color: var(--body-color);
-    }
-
-    .rating:not(:checked)>label:before {
-        content: "★";
-    }
-
-    .rating>input:checked+label:hover,
-    .rating>input:checked+label:hover~label,
-    .rating>input:checked~label:hover,
-    .rating>input:checked~label:hover~label,
-    .rating>label:hover~input:checked~label {
-        color: var(--orange);
-    }
-
-    .rating:not(:checked)>label:hover,
-    .rating:not(:checked)>label:hover~label {
-        color: var(--orange);
-    }
-
-    .rating>input:checked~label {
-        color: var(--orange);
-    }
-
-    form {
-        .input-box {
-            label {
-                font-weight: 500;
-                margin-bottom: 10px;
-                text-transform: capitalize;
-            }
-
-            .form-select,
-            .form-control {
-                height: 50px;
-                border-radius: 5px;
-                padding: 8px;
-                padding-left: 15px;
-                font-weight: normal;
-                caret-color: var(--primary-color);
-                color: var(--heading-color);
-
-
-                &::placeholder {
-                    color: var(--heading-color);
-                }
-            }
-
-            .form-select {
-                background-image: url(../img/icon/downward-arrow.png);
-
-                option {
-                    background: var(--white);
-                    color: var(--heading-color);
-                }
-            }
-
-            textarea.form-control {
-                height: 120px;
-                border-radius: 5px;
-            }
-        }
-    }
-}
-
-/*----------------------------------------------
-Review section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-15. Posts page start
-----------------------------------------------*/
-.post-page {
-    background-color: var(--bg-color1);
-
-    .iti {
-        flex: 1;
-    }
-
-    .sidebar-widget-area {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-
-        .icon-area {
-            font-size: 50px;
-            color: var(--primary-color);
-        }
-
-
-    }
-
-    .cmn-list {
-        gap: 10px;
-
-        .item {
-            display: flex;
-            gap: 10px;
-
-            .icon-area {
-                color: var(--primary-color);
-                font-size: 20px;
-            }
-        }
-    }
-}
-
-/*----------------------------------------------
-Posts page end
-----------------------------------------------*/
-
-/*----------------------------------------------
-16. pricing section start
-----------------------------------------------*/
-.pricing-section {
-    background-color: var(--bg-color1);
-    position: relative;
-}
-
-.pricing-section-inner {
-    z-index: 1;
-    position: relative;
-}
-
-.pricing-bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 70%;
-
-    svg {
-        height: 100%;
-    }
-}
-
-.pricing-box {
-    border-radius: 10px;
-    background: var(--white);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
-
-    .section-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 30px;
-        margin-bottom: 0;
-
-        .icon-area {
-            width: 55px;
-            height: 55px;
-            background-color: var(--primary-color-opacity-low);
-            border-radius: 5px;
-            color: var(--primary-color);
-            font-size: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .content-area {
-            .duration {
-                text-transform: uppercase;
-                font-size: 13px;
-            }
-        }
-
-        .price-title {
-            font-size: 36px;
-            color: var(--heading-color);
-            text-transform: capitalize;
-            margin-bottom: 0;
-            font-family: var(--heading-font);
-
-            .price {
-                font-weight: 500;
-            }
-        }
-    }
-
-    .section-middle {
-        background-color: var(--primary-color-opacity-low);
-        padding: 10px 30px 10px 30px;
-        border-radius: 0 2px 2px 0;
-        margin-right: 30px;
-
-        .title {
-            font-size: 24px;
-            color: var(--heading-color);
-            font-weight: 500;
-            text-transform: capitalize;
-            font-family: var(--heading-font);
-
-            .price {
-                font-weight: 500;
-                font-size: 40px;
-            }
-        }
-    }
-
-    .section-body {
-        color: var(--heading-color);
-        padding: 30px;
-
-
-
-        .pricing-feature {
-            margin-bottom: 32px;
-
-            li {
-                i {
-                    color: var(--primary-color);
-                    margin-right: 10px;
-                }
-            }
-
-            li:not(:last-child) {
-                margin-bottom: 16px;
-            }
-        }
-    }
-
-    .btn-area {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-
-// Rtl Pricing responsive start
-.rtl {
-    .pricing-box {
-
-        .section-middle {
-            margin-right: 0;
-            margin-left: 30px;
-            border-radius: 2px 0 0 2px;
-        }
-    }
-
-    .section-body .pricing-feature li i {
-        margin-right: 0;
-        margin-left: 10px;
-    }
-}
-
-//Rtl Pricing section end
-/*----------------------------------------------
-pricing section end
-----------------------------------------------*/
-
-
-
 
 /*----------------------------------------------
 17. Faq section start
@@ -4289,14 +3979,23 @@ pricing section end
 /*----------------------------------------------
 Faq end
 ----------------------------------------------*/
+
 /*----------------------------------------------
 09. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-    background-image: url(../img/background/avtar_testimonial2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
+    background-color: var(--bg-color2);
+
+    .testimonial-section-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-title,
+    .cmn-para-text {
+        color: var(--white);
+    }
 
     .testimonial-box {
         position: relative;
@@ -4308,8 +4007,8 @@ Faq end
 
         .testimonial-thumbs {
             position: absolute;
-            right: 20px;
-            top: -25px;
+            left: -20px;
+            top: -20px;
             background-color: var(--white);
             border: 1px solid var(--border-color1);
             padding: 2px;
@@ -4320,6 +4019,10 @@ Faq end
                 height: 65px;
                 border-radius: 4px;
             }
+        }
+
+        .testimonial-title {
+            margin-left: 45px;
         }
 
         .qoute-icon {
@@ -4342,6 +4045,7 @@ Faq end
 
     .testimonial-carousel .owl-stage-outer {
         padding-top: 50px;
+        padding-left: 30px;
     }
 }
 
