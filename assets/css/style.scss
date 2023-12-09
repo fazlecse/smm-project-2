@@ -950,7 +950,7 @@ Reusable style section start
         border: none;
         font-weight: 500;
         cursor: pointer;
-        background: transparent;
+        background-color: transparent;
         padding: 10px 5px 10px 5px;
         text-transform: uppercase;
         font-size: 15px;
@@ -4004,6 +4004,7 @@ Faq end
         border-radius: 4px;
         transition: var(--transition);
         border: 1px solid var(--border-color1);
+        margin-left: 20px;
 
         .testimonial-thumbs {
             position: absolute;
@@ -4045,7 +4046,6 @@ Faq end
 
     .testimonial-carousel .owl-stage-outer {
         padding-top: 50px;
-        padding-left: 30px;
     }
 }
 
@@ -4063,23 +4063,45 @@ Faq end
 // Rtl testimonial section start 
 
 /*----------------------------------------------
-Testimonial end
+Testimonial section end
 ----------------------------------------------*/
+
+/*----------------------------------------------
+00. Payment section start
+----------------------------------------------*/
+.payment-section {
+
+    .image-area {
+        img {
+            border-radius: 5px;
+
+        }
+    }
+}
+
+/*----------------------------------------------
+Payment section end
+----------------------------------------------*/
+
 
 /*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
 .blog-btn {
     display: inline-block;
+    margin-top: 20px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
 
-    i {
-        margin-left: 5px;
+    &:hover {
+        gap: 10px;
     }
 }
 
-.blog-section {
-    background-color: var(--bg-color1);
-}
+
 
 .blog-box {
     background: var(--white);
@@ -4130,7 +4152,7 @@ Testimonial end
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
     }
 
     .cmn-btn3 {

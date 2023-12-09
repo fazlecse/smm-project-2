@@ -50,6 +50,27 @@ $(document).ready(function () {
             },
         }
     });
+    // plan_area payment_slider
+    $('.payment-slider').owlCarousel({
+        loop: true,
+        autoplay: false,
+        autoplayTimeout: 1000,
+        margin: 20,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 3
+            },
+            600: {
+                items: 6
+            },
+            1000: {
+                items: 8
+            }
+        }
+    });
+
     // Swiper-slider livestream-swiper
     var swiper = new Swiper(".livestream-swiper", {
         effect: "coverflow",
@@ -78,7 +99,7 @@ $(document).ready(function () {
         $('.testimonial-carousel').owlCarousel({
             loop: true,
             autoplay: true,
-            margin: 40,
+            margin: 20,
             nav: false,
             dots: true,
             // rtl: true,
