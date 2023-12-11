@@ -3827,6 +3827,100 @@ Service section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+00. Single service section start
+----------------------------------------------*/
+.single-service-page {
+    background-color: var(--bg-color1);
+
+    .single-service-section {
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+.single-service-section {
+    padding-bottom: 80px;
+}
+
+.signle-service-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    .thumbs-area {
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.single-service {
+    position: relative;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color1);
+    box-shadow: var(--shadow1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+
+    &:hover {
+        .arrow {
+            transform: scale(1);
+            top: calc(0% + 10px);
+            right: calc(0% + 10px);
+        }
+    }
+
+    .thumbs-area {
+        img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+    }
+
+    .title {
+        text-transform: capitalize;
+
+        span {
+            margin-top: 5px;
+            display: block;
+        }
+    }
+
+    .arrow {
+        color: var(--white);
+        background-color: var(--primary-color);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        position: absolute;
+        transition: all .5s ease-in-out;
+        top: 50%;
+        right: 50%;
+    }
+}
+
+/*----------------------------------------------
+Single service section end
+----------------------------------------------*/
+
+
+
+/*----------------------------------------------
 06. Why Choose us section start
 ----------------------------------------------*/
 .rotate-group-images {
@@ -4527,7 +4621,8 @@ Copyright end
     padding-top: 190px;
     padding-bottom: 100px;
     background-color: var(--bg-color2);
-    .banner-section-inner{
+
+    .banner-section-inner {
         position: relative;
         z-index: 1;
     }
