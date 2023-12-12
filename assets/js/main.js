@@ -206,19 +206,6 @@ $(document).ready(function () {
     });
     // cmn select2 modal start
 
-    // Twism map section
-    $('#worldmap').twism("create",
-        {
-            map: "custom",
-            customMap: 'assets/img/maps/bd.svg',
-            border: "#008DFF",
-            color: "#E5F3FF",
-            backgroundColor: "transparent",
-            hoverColor: "#008DFF",
-            height: "300px",
-            hoverBorder: "#008DFF",
-        });
-
     // Nice select start
     $('.nice-select').niceSelect();
     // Nice select end
