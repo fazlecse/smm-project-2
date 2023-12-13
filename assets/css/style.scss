@@ -445,7 +445,7 @@ h4 {
     font-size: 24px;
     margin-bottom: 5px;
     // font-weight: 500;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 @media (max-width: 991px) {
@@ -2786,10 +2786,11 @@ user nav Profile end
         transition: var(--transition);
         opacity: 0;
         z-index: 151;
-        
+
         li {
             border-bottom: 1px solid var(--border-color1);
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-bottom: 5px;
             }
 
@@ -2799,7 +2800,7 @@ user nav Profile end
                 color: var(--fontColor);
                 white-space: normal;
                 transition: var(--transition);
-                
+
 
                 &:active,
                 &:focus,
@@ -4554,6 +4555,7 @@ Payment section end
             transform: scale(1.1);
             width: 100%;
             height: 14vw;
+            object-fit: cover;
         }
     }
 
@@ -4669,6 +4671,40 @@ Payment section end
 // Dark theme blog section end
 /*----------------------------------------------
 Blog section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Author section start 
+----------------------------------------------*/
+.author-section {
+    background-color: var(--bg-color1);
+}
+.author-box{
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow3);
+}
+.author-box-top {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--white);
+
+    .thumbs-area {
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            background-color: var(--white);
+            padding: 5px;
+            box-shadow: var(--shadow2);
+        }
+    }
+}
+
+/*----------------------------------------------
+Author section end
 ----------------------------------------------*/
 
 
@@ -4984,16 +5020,54 @@ Banner end
 ----------------------------------------------*/
 
 
+
+
 /*----------------------------------------------
-22. Contact section start
+24. Contact section start
 ----------------------------------------------*/
 .contact-section {
     background-color: var(--bg-color1);
+    position: relative;
+    z-index: 0;
+
+    .contact-area {
+        .contact-item-list {
+            margin-top: 30px;
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+                .icon-area {
+                    margin-right: 15px;
+                    border-radius: 5px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    color: var(--primary-color);
+                    background-color: var(--primary-color-opacity-low);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+        }
+    }
 
     .contact-message-area {
+        background-color: var(--white);
+        padding: 30px 25px;
+        box-shadow: var(--shadow1);
+        border-radius: 5px;
 
         .contact-header {
             margin-bottom: 30px;
+        }
+
+        .btn-area {
+            margin-top: 30px;
         }
 
         .form-label {
@@ -5004,76 +5078,37 @@ Banner end
             }
         }
 
-
     }
 
-    .contact-area {
-        .thumbs-area {
-            max-width: 500px;
-            margin: auto;
-        }
+}
 
-        .contact-list {
-            margin-top: 50px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-
-            .item {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-
-                .icon-area {
-                    width: 40px;
-                    height: 40px;
-                    background-color: var(--primary-color-opacity-low);
-                    border-radius: 5px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: var(--primary-color);
-                }
-            }
-        }
+// Responsive contact section start
+@media (max-width: 991px) {
+    .contact-section .contact-inner {
+        padding: 30px;
     }
 }
 
-// Contact responsive start
 
-
-// Contact responsive end
+// Responsive contact section end
 
 // Rtl contact section start 
 .rtl {
-    .contact-section {
-        .contact-area {
-            padding: 30px 30px 30px 10px;
-            border-radius: 0 10px 10px 0;
-        }
-
-        .contact-message-area {
-            padding: 30px 10px 30px 30px;
-        }
-    }
-
-    @media (max-width: 991px) {
-        .contact-section {
-            .contact-area {
-                padding: 20px;
-                border-radius: 10px 10px 0 0;
-            }
-
-            .contact-message-area {
-                padding: 20px;
-            }
-        }
-
+    .contact-section .contact-area .contact-item-list .item .icon-area {
+        margin-right: 0;
+        margin-left: 15px;
     }
 }
 
 // Rtl contact section end
+// Dark theme contact section start
+.dark-theme {
+    .contact-section .contact-area .contact-item-list .item .icon-area {
+        background-color: var(--bg-color2);
+    }
+}
 
+// Dark theme contact section end
 /*----------------------------------------------
 Contact end
 ----------------------------------------------*/

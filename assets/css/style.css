@@ -384,7 +384,7 @@ h3 {
 h4 {
   font-size: 24px;
   margin-bottom: 5px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991px) {
@@ -3688,6 +3688,8 @@ Payment section end
   transform: scale(1.1);
   width: 100%;
   height: 14vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog-box .content-box {
   padding: 5px;
@@ -3765,6 +3767,38 @@ Payment section end
 
 /*----------------------------------------------
 Blog section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Author section start 
+----------------------------------------------*/
+.author-section {
+  background-color: var(--bg-color1);
+}
+
+.author-box {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow3);
+}
+
+.author-box-top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--white);
+}
+.author-box-top .thumbs-area img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  background-color: var(--white);
+  padding: 5px;
+  box-shadow: var(--shadow2);
+}
+
+/*----------------------------------------------
+Author section end
 ----------------------------------------------*/
 /*----------------------------------------------
 19. Newsletter section start
@@ -4003,13 +4037,44 @@ Copyright end
 Banner end
 ----------------------------------------------*/
 /*----------------------------------------------
-22. Contact section start
+24. Contact section start
 ----------------------------------------------*/
 .contact-section {
   background-color: var(--bg-color1);
+  position: relative;
+  z-index: 0;
+}
+.contact-section .contact-area .contact-item-list {
+  margin-top: 30px;
+}
+.contact-section .contact-area .contact-item-list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.contact-section .contact-area .contact-item-list .item .icon-area {
+  margin-right: 15px;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: var(--primary-color);
+  background-color: var(--primary-color-opacity-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .contact-message-area {
+  background-color: var(--white);
+  padding: 30px 25px;
+  box-shadow: var(--shadow1);
+  border-radius: 5px;
 }
 .contact-section .contact-message-area .contact-header {
   margin-bottom: 30px;
+}
+.contact-section .contact-message-area .btn-area {
+  margin-top: 30px;
 }
 .contact-section .contact-message-area .form-label {
   text-transform: capitalize;
@@ -4017,47 +4082,19 @@ Banner end
 .contact-section .contact-message-area .form-label h5 {
   font-weight: 600;
 }
-.contact-section .contact-area .thumbs-area {
-  max-width: 500px;
-  margin: auto;
+
+@media (max-width: 991px) {
+  .contact-section .contact-inner {
+    padding: 30px;
+  }
 }
-.contact-section .contact-area .contact-list {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.contact-section .contact-area .contact-list .item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.contact-section .contact-area .contact-list .item .icon-area {
-  width: 40px;
-  height: 40px;
-  background-color: var(--primary-color-opacity-low);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-color);
+.rtl .contact-section .contact-area .contact-item-list .item .icon-area {
+  margin-right: 0;
+  margin-left: 15px;
 }
 
-.rtl .contact-section .contact-area {
-  padding: 30px 30px 30px 10px;
-  border-radius: 0 10px 10px 0;
-}
-.rtl .contact-section .contact-message-area {
-  padding: 30px 10px 30px 30px;
-}
-@media (max-width: 991px) {
-  .rtl .contact-section .contact-area {
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
-  }
-  .rtl .contact-section .contact-message-area {
-    padding: 20px;
-  }
+.dark-theme .contact-section .contact-area .contact-item-list .item .icon-area {
+  background-color: var(--bg-color2);
 }
 
 /*----------------------------------------------
