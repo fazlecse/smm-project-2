@@ -786,7 +786,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-top: 1px solid var(--border-color1);
 }
 
-.cmn-close-btn {
+.cmn-btn-close {
   font-size: 18px;
   width: 40px;
   min-width: 40px;
@@ -799,7 +799,8 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 6px;
   transition: var(--transition);
 }
-.cmn-close-btn:hover {
+
+.cmn-btn-close:hover {
   background-color: var(--primary-color-opacity-low);
   color: var(--primary-color);
 }
@@ -1623,7 +1624,7 @@ section {
 
 @media (max-width: 991px) {
   .section-subtitle {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .social-area ul li a {
@@ -2220,7 +2221,7 @@ user nav Profile end
 .notification-panel:hover .notification-dropdown {
   visibility: visible;
   opacity: 1;
-  top: 55px;
+  top: 54px;
 }
 .notification-panel .dropdown-toggle {
   width: 40px;
@@ -2272,7 +2273,7 @@ user nav Profile end
   max-height: 336px;
   overflow: hidden;
   padding: 5px;
-  padding-bottom: 50px;
+  padding-bottom: 44px;
   position: absolute;
   right: -60px;
   top: 0%;
@@ -3054,29 +3055,21 @@ Padding bottom
   position: relative;
 }
 .navbar .navbar-toggler {
-  background: var(--gradient-bg);
-  color: var(--white);
-  height: 40px;
+  font-size: 18px;
   width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color1);
+  box-shadow: none;
+  border-radius: 6px;
+  transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  border: 1px solid var(--primary-color);
-  border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
-  box-shadow: none;
+  background-color: var(--white);
 }
-.navbar .cmn-btn-close {
-  font-size: 18px;
-  background: var(--primary-color);
-  width: 40px;
-  height: 40px;
-  border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
-  color: var(--white);
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  box-shadow: none;
+.navbar .navbar-toggler:hover {
+  background-color: var(--primary-color-opacity-low);
+  color: var(--primary-color);
 }
 .navbar .navbar-nav {
   text-align: center;
@@ -3249,6 +3242,9 @@ Bottom Mobile, Tab nav end
   .hero-section .hero-content .hero-description {
     margin: 30px auto;
   }
+  .hero-section .btn-area {
+    justify-content: center;
+  }
 }
 /*----------------------------------------------
 Hero end
@@ -3298,6 +3294,27 @@ Hero end
   color: #B2B2BC;
 }
 
+@media (max-width: 991px) {
+  .feature-section .feature-section-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-section .feature-section-inner .item:nth-child(3) {
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .feature-section .feature-section-inner {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+  .feature-section .feature-section-inner .item:nth-child(1) {
+    border-right: none;
+  }
+  .feature-section .feature-section-inner .item:nth-child(3) {
+    padding: 20px;
+  }
+}
 /*----------------------------------------------
 Feature section end
 ----------------------------------------------*/
@@ -3773,6 +3790,7 @@ Blog section end
 ----------------------------------------------*/
 .author-section {
   background-color: var(--bg-color1);
+  background-image: url(../img/background/login-bg.png);
 }
 
 .author-box {
@@ -4125,6 +4143,7 @@ Map section end
 ----------------------------------------------*/
 .login-signup-page {
   background-color: var(--bg-color1);
+  background-image: url(../img/background/login-bg.png);
   position: relative;
 }
 .login-signup-page .login-signup-form {
