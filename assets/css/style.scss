@@ -968,7 +968,7 @@ Reusable style section start
 .language-box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     margin-left: 10px;
 
 
@@ -978,7 +978,7 @@ Reusable style section start
         font-weight: 500;
         cursor: pointer;
         background-color: transparent;
-        padding: 10px 5px 10px 5px;
+        // padding: 10px 5px 10px 5px;
         text-transform: uppercase;
         font-size: 15px;
 
@@ -992,7 +992,7 @@ Reusable style section start
 }
 
 // Responsive language box start
-@media(min-width: 991px) {
+@media(min-width: 992px) {
     .language-box {
         .form-select {
             padding: 10px 30px 10px 5px;
@@ -1000,7 +1000,22 @@ Reusable style section start
     }
 }
 
+@media(max-width: 991px) {
+    .language-box {
+        margin-left: 15px;
+    }
+}
+
 // Responsive language box end
+// Rtl language box start
+.rtl {
+    .language-box {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+// Rtl language box end
 // Language box end
 
 // Cmn box start
@@ -1011,9 +1026,6 @@ Reusable style section start
 .cmn-box-item:nth-child(5) {
     margin-top: 60px;
 }
-
-
-
 
 .cmn-box {
     display: flex;
@@ -1043,6 +1055,18 @@ Reusable style section start
     }
 }
 
+// Responsive cmn box start
+@media(max-width: 991px) {
+    .cmn-box-item:nth-child(2) {
+        margin-top: var(--bs-gutter-y);
+    }
+
+    .cmn-box-item:nth-child(5) {
+        margin-top: var(--bs-gutter-y);
+    }
+}
+
+// Responsive cmn box end
 // Rtl cmn box start
 .rtl {
     .cmn-box2-item:nth-child(1) {
@@ -2797,10 +2821,9 @@ user nav Profile end
             a {
                 padding: 10px 10px 10px 15px;
                 display: flex;
-                color: var(--fontColor);
+                gap: 10px;
                 white-space: normal;
                 transition: var(--transition);
-
 
                 &:active,
                 &:focus,
@@ -2815,7 +2838,6 @@ user nav Profile end
                     width: 30px;
                     height: 30px;
                     text-align: center;
-                    margin-right: 10px;
                     color: var(--white);
                     font-size: 16px;
                     display: flex;
@@ -2866,6 +2888,17 @@ user nav Profile end
     }
 }
 
+// Rtl notification dropdown start
+.rtl {
+    .notification-panel {
+        .notification-dropdown {
+            left: -60px;
+            right: auto;
+        }
+    }
+}
+
+// Rtl notification dropdown end
 // Notification box end
 
 /*----------------------------------------------
@@ -3351,12 +3384,6 @@ Cmn table start
 
 }
 
-@media (max-width: 575px) {
-    .cmn-btn {
-        padding: 7px;
-    }
-}
-
 // Responsive table section end
 
 // Rtl cmn tabele start
@@ -3735,7 +3762,7 @@ Padding bottom
 
 
     .navbar-nav {
-        text-align: center;
+        // text-align: center;
 
         .nav-link {
             font-size: 15px;
@@ -3858,9 +3885,18 @@ Padding bottom
         margin-left: 0 !important;
     }
 
-    .navbar .navbar-nav .nav-link i {
-        margin-right: 0;
-        margin-left: 5px;
+    .navbar .navbar-nav {
+        .nav-link {
+            i {
+                margin-right: 0;
+                margin-left: 5px;
+            }
+
+            &.active::after {
+                right: 0;
+                left: auto;
+            }
+        }
     }
 }
 
@@ -4070,6 +4106,7 @@ Hero end
             .item:nth-child(1) {
                 border-right: none;
             }
+
             .item:nth-child(3) {
                 padding: 20px;
             }
@@ -4078,6 +4115,17 @@ Hero end
 }
 
 // Responsive feature section end
+// Rtl feature section start
+.rtl {
+    .feature-section .feature-section-inner .item:nth-child(1) {
+        border-left: 1px solid var(--border-color1);
+        border-right: none;
+        margin-right: 0;
+        margin-left: -20px;
+    }
+}
+
+// Rtl feature section end
 /*----------------------------------------------
 Feature section end
 ----------------------------------------------*/
@@ -4263,6 +4311,25 @@ Service section end
     margin-bottom: 0;
 }
 
+// Rtl service page start
+.rtl {
+
+    .service-page-area {
+
+        .accordion-button:focus,
+        .accordion-button:not(.collapsed) {
+            border-left: none;
+            border-right: 2px solid var(--primary-color);
+        }
+    }
+
+    .accordion-body {
+        border-left: none;
+        border-right: 2px solid var(--primary-color);
+    }
+}
+
+// Rtl service page end
 /*----------------------------------------------
 Service page end
 ----------------------------------------------*/
@@ -4731,10 +4798,26 @@ Blog section end
             background-color: var(--white);
             padding: 5px;
             box-shadow: var(--shadow2);
+            object-fit: cover;
         }
     }
 }
 
+// Responsive author section start
+@media(max-width: 575px) {
+    .author-box-top {
+        flex-direction: column;
+
+        .thumbs-area {
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+// Responsive author section end
 /*----------------------------------------------
 Author section end
 ----------------------------------------------*/
@@ -5113,16 +5196,6 @@ Banner end
     }
 
 }
-
-// Responsive contact section start
-@media (max-width: 991px) {
-    .contact-section .contact-inner {
-        padding: 30px;
-    }
-}
-
-
-// Responsive contact section end
 
 // Rtl contact section start 
 .rtl {

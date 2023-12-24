@@ -837,7 +837,6 @@ Reusable style section start
 .language-box {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-left: 10px;
 }
 .language-box .form-select {
@@ -846,7 +845,6 @@ Reusable style section start
   font-weight: 500;
   cursor: pointer;
   background-color: transparent;
-  padding: 10px 5px 10px 5px;
   text-transform: uppercase;
   font-size: 15px;
 }
@@ -854,11 +852,21 @@ Reusable style section start
   box-shadow: none;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   .language-box .form-select {
     padding: 10px 30px 10px 5px;
   }
 }
+@media (max-width: 991px) {
+  .language-box {
+    margin-left: 15px;
+  }
+}
+.rtl .language-box {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
 .cmn-box-item:nth-child(2) {
   margin-top: 60px;
 }
@@ -891,6 +899,14 @@ Reusable style section start
   margin-bottom: 10px;
 }
 
+@media (max-width: 991px) {
+  .cmn-box-item:nth-child(2) {
+    margin-top: var(--bs-gutter-y);
+  }
+  .cmn-box-item:nth-child(5) {
+    margin-top: var(--bs-gutter-y);
+  }
+}
 .rtl .cmn-box2-item:nth-child(1) {
   border-right: none;
   border-left: 1px solid var(--border-color1);
@@ -2292,7 +2308,7 @@ user nav Profile end
 .notification-panel .notification-dropdown li a {
   padding: 10px 10px 10px 15px;
   display: flex;
-  color: var(--fontColor);
+  gap: 10px;
   white-space: normal;
   transition: var(--transition);
 }
@@ -2306,7 +2322,6 @@ user nav Profile end
   width: 30px;
   height: 30px;
   text-align: center;
-  margin-right: 10px;
   color: var(--white);
   font-size: 16px;
   display: flex;
@@ -2345,6 +2360,11 @@ user nav Profile end
 }
 .notification-panel .notification-dropdown .clear-all a:hover {
   color: var(--primary-color);
+}
+
+.rtl .notification-panel .notification-dropdown {
+  left: -60px;
+  right: auto;
 }
 
 /*----------------------------------------------
@@ -2722,11 +2742,6 @@ Cmn table start
     margin-right: 20px;
   }
 }
-@media (max-width: 575px) {
-  .cmn-btn {
-    padding: 7px;
-  }
-}
 .rtl .cmn-table-card .search-bar {
   margin-right: 0;
   margin-left: 20px;
@@ -3071,9 +3086,6 @@ Padding bottom
   background-color: var(--primary-color-opacity-low);
   color: var(--primary-color);
 }
-.navbar .navbar-nav {
-  text-align: center;
-}
 .navbar .navbar-nav .nav-link {
   font-size: 15px;
   font-weight: 500;
@@ -3161,6 +3173,10 @@ Padding bottom
 .rtl .navbar .navbar-nav .nav-link i {
   margin-right: 0;
   margin-left: 5px;
+}
+.rtl .navbar .navbar-nav .nav-link.active::after {
+  right: 0;
+  left: auto;
 }
 
 /*----------------------------------------------
@@ -3315,6 +3331,13 @@ Hero end
     padding: 20px;
   }
 }
+.rtl .feature-section .feature-section-inner .item:nth-child(1) {
+  border-left: 1px solid var(--border-color1);
+  border-right: none;
+  margin-right: 0;
+  margin-left: -20px;
+}
+
 /*----------------------------------------------
 Feature section end
 ----------------------------------------------*/
@@ -3465,6 +3488,16 @@ Service section end
 
 .table {
   margin-bottom: 0;
+}
+
+.rtl .service-page-area .accordion-button:focus,
+.rtl .service-page-area .accordion-button:not(.collapsed) {
+  border-left: none;
+  border-right: 2px solid var(--primary-color);
+}
+.rtl .accordion-body {
+  border-left: none;
+  border-right: 2px solid var(--primary-color);
 }
 
 /*----------------------------------------------
@@ -3813,8 +3846,19 @@ Blog section end
   background-color: var(--white);
   padding: 5px;
   box-shadow: var(--shadow2);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+@media (max-width: 575px) {
+  .author-box-top {
+    flex-direction: column;
+  }
+  .author-box-top .thumbs-area img {
+    width: 150px;
+    height: 150px;
+  }
+}
 /*----------------------------------------------
 Author section end
 ----------------------------------------------*/
@@ -4101,11 +4145,6 @@ Banner end
   font-weight: 600;
 }
 
-@media (max-width: 991px) {
-  .contact-section .contact-inner {
-    padding: 30px;
-  }
-}
 .rtl .contact-section .contact-area .contact-item-list .item .icon-area {
   margin-right: 0;
   margin-left: 15px;
