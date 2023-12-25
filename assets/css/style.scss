@@ -58,9 +58,7 @@ Typography
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Kanit:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --body-font: 'Figtree', sans-serif;
     --body-font: 'Kanit', sans-serif;
-    --heading-font: 'Figtree', sans-serif;
     --heading-font: 'Kanit', sans-serif;
     --primary-color: hsl(var(--base));
     --secondary-color: hsl(var(--secondary));
@@ -219,6 +217,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 
@@ -1983,6 +1982,7 @@ section {
     }
 }
 
+// Social area start
 .social-area ul li a {
     width: 35px;
     height: 35px;
@@ -2001,6 +2001,16 @@ section {
     }
 }
 
+// Rtl social area start
+.rtl {
+    .social-area ul li a{
+        margin-right: 0;
+        margin-left: 14px;
+    }
+}
+
+// Rtl social area end
+// Social area end
 
 
 .star ul li i {
@@ -3987,9 +3997,13 @@ Bottom Mobile, Tab nav end
         max-width: 750px;
 
         img {
+            mask-image: url(../img/hero/hero-thumbs-bg.png);
             -webkit-mask-image: url(../img/hero/hero-thumbs-bg.png);
+            mask-size: contain;
             -webkit-mask-size: contain;
+            mask-position: center center;
             -webkit-mask-position: center center;
+            mask-repeat: no-repeat;
             -webkit-mask-repeat: no-repeat;
         }
     }
@@ -4321,12 +4335,13 @@ Service section end
             border-left: none;
             border-right: 2px solid var(--primary-color);
         }
+
+        .accordion-body {
+            border-left: none;
+            border-right: 2px solid var(--primary-color);
+        }
     }
 
-    .accordion-body {
-        border-left: none;
-        border-right: 2px solid var(--primary-color);
-    }
 }
 
 // Rtl service page end
@@ -4737,14 +4752,23 @@ Payment section end
 // Blog responsive end
 
 // Blog responsive start
-.rtl .blog-box {
-    .blog-author {
-        .author-img {
-            margin-right: 0;
-            margin-left: 10px;
+.rtl {
+    .blog-btn {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+
+    .blog-box {
+        .blog-author {
+            .author-img {
+                margin-right: 0;
+                margin-left: 10px;
+            }
         }
     }
 }
+
 
 // Blog responsive end
 // Dark theme blog section start
@@ -5684,6 +5708,7 @@ Policy section start
 ----------------------------------------------*/
 .policy-section {
     background-color: var(--bg-color1);
+    background-image: url(../img/background/login-bg.png);
     position: relative;
 
     .policy-section-inner {

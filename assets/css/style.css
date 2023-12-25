@@ -52,9 +52,7 @@ Typography
 ----------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Kanit:wght@400;500;600;700;800&display=swap");
 :root {
-  --body-font: "Figtree", sans-serif;
   --body-font: "Kanit", sans-serif;
-  --heading-font: "Figtree", sans-serif;
   --heading-font: "Kanit", sans-serif;
   --primary-color: hsl(var(--base));
   --secondary-color: hsl(var(--secondary));
@@ -185,6 +183,8 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
+  -webkit-appearance: textfield;
+          appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -1658,6 +1658,11 @@ section {
 .social-area ul li a:hover {
   background-color: var(--primary-color);
   color: var(--white);
+}
+
+.rtl .social-area ul li a {
+  margin-right: 0;
+  margin-left: 14px;
 }
 
 .star ul li i {
@@ -3244,9 +3249,13 @@ Bottom Mobile, Tab nav end
   max-width: 750px;
 }
 .hero-section .hero-thumbs img {
+  mask-image: url(../img/hero/hero-thumbs-bg.png);
   -webkit-mask-image: url(../img/hero/hero-thumbs-bg.png);
+  mask-size: contain;
   -webkit-mask-size: contain;
+  mask-position: center center;
   -webkit-mask-position: center center;
+  mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
 }
 
@@ -3495,7 +3504,7 @@ Service section end
   border-left: none;
   border-right: 2px solid var(--primary-color);
 }
-.rtl .accordion-body {
+.rtl .service-page-area .accordion-body {
   border-left: none;
   border-right: 2px solid var(--primary-color);
 }
@@ -3798,6 +3807,9 @@ Payment section end
   .blog-box .img-box img {
     height: 55vw;
   }
+}
+.rtl .blog-btn i {
+  transform: rotate(180deg);
 }
 .rtl .blog-box .blog-author .author-img {
   margin-right: 0;
@@ -4502,6 +4514,7 @@ Policy section start
 ----------------------------------------------*/
 .policy-section {
   background-color: var(--bg-color1);
+  background-image: url(../img/background/login-bg.png);
   position: relative;
 }
 .policy-section .policy-section-inner {
