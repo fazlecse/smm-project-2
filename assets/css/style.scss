@@ -62,7 +62,6 @@ Typography
     --heading-font: 'Kanit', sans-serif;
     --primary-color: hsl(var(--base));
     --secondary-color: hsl(var(--secondary));
-    --heading-color: #1B1C20;
     --heading-color: #002138;
     --black: #1B1C20;
     --black: #002138;
@@ -71,7 +70,6 @@ Typography
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
     --btn-hover-bg: #09e871;
-
     --soft-green: #ccf888;
     --moderate-lime-green: #4da44e;
     --soft-red: #d82a68;
@@ -2003,7 +2001,7 @@ section {
 
 // Rtl social area start
 .rtl {
-    .social-area ul li a{
+    .social-area ul li a {
         margin-right: 0;
         margin-left: 14px;
     }
@@ -5744,7 +5742,6 @@ Policy section start
         }
     }
 }
-
 
 // Responsive policy seciton end
 /*----------------------------------------------
