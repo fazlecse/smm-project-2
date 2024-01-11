@@ -334,6 +334,15 @@ textarea.form-control {
   background-size: 12px;
 }
 
+.input-group-text {
+  gap: 5px;
+  background-color: var(--primary-color-opacity-low);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color1);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
 .cmn-file-input {
   position: relative;
   height: 40px;
@@ -618,7 +627,7 @@ h3 {
 h4 {
   font-size: 24px;
   margin-bottom: 5px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: capitalize;
 }
 
@@ -631,7 +640,7 @@ h5 {
   text-transform: capitalize;
   font-size: 20px;
   margin-bottom: 5px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h6 {
@@ -763,12 +772,43 @@ Reusable style section start
   box-shadow: none;
 }
 
+@media (max-width: 425px) {
+  .language-box i {
+    display: none;
+  }
+}
 .link {
   text-decoration: underline;
   color: var(--primary-color);
   transition: var(--transition);
 }
 
+.cmn-box4 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.cmn-box4 .icon-box {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color-opacity-low);
+  color: var(--primary-color);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .cmn-box4 {
+    flex-direction: column;
+  }
+  .cmn-box4 .icon-box {
+    margin: auto;
+  }
+}
 .input-box {
   position: relative;
   display: flex;
@@ -1404,6 +1444,12 @@ section {
   margin: 50px 0;
 }
 
+.cmn-hr2 {
+  margin: 20px 0;
+  border-color: var(--border-color1);
+  opacity: 1;
+}
+
 hr.divider {
   margin-top: 50px;
   padding: 0;
@@ -1436,6 +1482,7 @@ hr.divider:after {
 }
 .dropdown-menu .dropdown-header {
   border-bottom: 1px solid var(--border-color1);
+  margin-bottom: 5px;
 }
 .dropdown-menu .dropdown-item {
   border-radius: 5px;
@@ -1469,7 +1516,7 @@ Cmn table start
 }
 .cmn-table table thead tr th {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--heading-color);
   padding: 20px 10px;
   text-transform: capitalize;
@@ -2639,7 +2686,6 @@ Header Nav start
 }
 .header-nav .profile {
   min-width: 240px;
-  padding-bottom: 0;
 }
 .header-nav .profile .dropdown-header h6 {
   font-size: 18px;
@@ -3560,4 +3606,51 @@ Payment section start
 
 /*----------------------------------------------
 Payment section end
+-----------------------------------------------*/
+/*----------------------------------------------
+Notice card section start
+-----------------------------------------------*/
+.notice-card {
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--bg-color2);
+}
+.notice-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+.notice-card .image-area {
+  margin-top: 15px;
+}
+.notice-card img {
+  border: 1px solid var(--border-color1);
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--white);
+}
+.notice-card .content-area .title {
+  max-width: 450px;
+}
+
+.date-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-box i {
+  color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+  .notice-card .content-area .title {
+    text-align: center;
+  }
+  .date-box {
+    justify-content: center;
+  }
+}
+/*----------------------------------------------
+Notice card section end
 -----------------------------------------------*/

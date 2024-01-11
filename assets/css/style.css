@@ -963,6 +963,31 @@ Reusable style section start
   color: var(--primary-color);
 }
 
+.cmn-box4 {
+  display: flex;
+  gap: 20px;
+}
+.cmn-box4 .icon-box {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color-opacity-low);
+  color: var(--primary-color);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .cmn-box4 {
+    flex-direction: column;
+  }
+  .cmn-box4 .icon-box {
+    margin: auto;
+  }
+}
 .text-underline {
   position: relative;
   z-index: 1;
@@ -3360,32 +3385,10 @@ Feature section end
   flex-direction: column;
   gap: 20px;
 }
-.about-section .about-content .item-list-container .item {
-  display: flex;
-  gap: 20px;
-}
-.about-section .about-content .icon-box {
-  width: 50px;
-  min-width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary-color-opacity-low);
-  color: var(--primary-color);
-  border-radius: 5px;
-  font-size: 18px;
-}
 
 @media (max-width: 767px) {
   .about-section {
     text-align: center;
-  }
-  .about-section .about-content .item-list-container .item {
-    flex-direction: column;
-  }
-  .about-section .about-content .item-list-container .item .icon-box {
-    margin: auto;
   }
 }
 /*----------------------------------------------

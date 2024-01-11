@@ -1143,6 +1143,40 @@ Reusable style section start
 }
 
 // cmn box3 end
+// cmn box4 start
+.cmn-box4 {
+    display: flex;
+    gap: 20px;
+
+    .icon-box {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color-opacity-low);
+        color: var(--primary-color);
+        border-radius: 5px;
+        font-size: 18px;
+
+    }
+}
+
+// Responsive cmn box4 start
+@media(max-width: 767px) {
+    .cmn-box4 {
+        flex-direction: column;
+
+        .icon-box {
+            margin: auto;
+        }
+    }
+}
+
+// Responsive cmn box4 end
+// cmn box4 end
+
 // Text underline start
 .text-underline {
     position: relative;
@@ -4157,23 +4191,6 @@ Feature section end
             flex-direction: column;
             gap: 20px;
 
-            .item {
-                display: flex;
-                gap: 20px;
-            }
-        }
-
-        .icon-box {
-            width: 50px;
-            min-width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--primary-color-opacity-low);
-            color: var(--primary-color);
-            border-radius: 5px;
-            font-size: 18px;
 
         }
     }
@@ -4183,18 +4200,6 @@ Feature section end
 @media (max-width: 767px) {
     .about-section {
         text-align: center;
-
-        .about-content {
-            .item-list-container {
-                .item {
-                    flex-direction: column;
-
-                    .icon-box {
-                        margin: auto;
-                    }
-                }
-            }
-        }
     }
 }
 

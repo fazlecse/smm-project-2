@@ -384,7 +384,14 @@ textarea.form-control {
     background-size: 12px;
 }
 
-
+.input-group-text {
+    gap: 5px;
+    background-color: var(--primary-color-opacity-low);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color1);
+    cursor: pointer;
+    text-transform: capitalize;
+}
 
 // Cmn file input start
 .cmn-file-input {
@@ -716,7 +723,7 @@ h3 {
 h4 {
     font-size: 24px;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: capitalize;
 }
 
@@ -730,7 +737,7 @@ h5 {
     text-transform: capitalize;
     font-size: 20px;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h6 {
@@ -857,6 +864,7 @@ Reset section end
 /*----------------------------------------------
 Reusable style section start
 ----------------------------------------------*/
+
 // Language box start
 .language-box {
     display: flex;
@@ -879,20 +887,15 @@ Reusable style section start
     }
 }
 
-// @media(max-width: 991px) {
-//     .language-box {
-//         margin-left: 15px;
-//     }
-// }
+@media(max-width: 425px) {
+    .language-box {
+        i {
+            display: none;
+        }
+    }
+}
 
 // Responsive language box end
-// Rtl language box start
-// .rtl {
-//     .language-box {
-//         margin-left: 0;
-//         margin-right: 15px;
-//     }
-// }
 
 // Rtl language box end
 // Language box end
@@ -902,6 +905,41 @@ Reusable style section start
     color: var(--primary-color);
     transition: var(--transition);
 }
+
+// cmn box4 start
+.cmn-box4 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .icon-box {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color-opacity-low);
+        color: var(--primary-color);
+        border-radius: 5px;
+        font-size: 18px;
+
+    }
+}
+
+// Responsive cmn box4 start
+@media(max-width: 767px) {
+    .cmn-box4 {
+        flex-direction: column;
+
+        .icon-box {
+            margin: auto;
+        }
+    }
+}
+
+// Responsive cmn box4 end
+// cmn box4 end
 
 // Link end
 // Input box start
@@ -1661,6 +1699,12 @@ section {
 
 }
 
+.cmn-hr2 {
+    margin: 20px 0;
+    border-color: var(--border-color1);
+    opacity: 1;
+}
+
 hr.divider {
     margin-top: 50px;
     padding: 0;
@@ -1697,6 +1741,7 @@ hr.divider:after {
 
     .dropdown-header {
         border-bottom: 1px solid var(--border-color1);
+        margin-bottom: 5px;
     }
 
     .dropdown-item {
@@ -1743,7 +1788,7 @@ Cmn table start
             tr {
                 th {
                     font-size: 18px;
-                    font-weight: 500;
+                    font-weight: 400;
                     color: var(--heading-color);
                     padding: 20px 10px;
                     text-transform: capitalize;
@@ -3238,7 +3283,6 @@ Header Nav start
 
     .profile {
         min-width: 240px;
-        padding-bottom: 0;
         // top: 8px !important;
 
         .dropdown-header {
@@ -4432,6 +4476,7 @@ Payment section start
 }
 
 // Rtl payment section enn
+
 // Transfer details section start
 .transfer-details-section {
     .link {
@@ -4465,4 +4510,63 @@ Payment section start
 
 /*----------------------------------------------
 Payment section end
+-----------------------------------------------*/
+
+/*----------------------------------------------
+Notice card section start
+-----------------------------------------------*/
+.notice-card {
+    border: 1px solid var(--border-color1);
+    box-shadow: var(--shadow1);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-color2);
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .image-area {
+        margin-top: 15px;
+    }
+
+    img {
+        border: 1px solid var(--border-color1);
+        border-radius: 5px;
+        padding: 5px;
+        background-color: var(--white);
+    }
+
+    .content-area {
+        .title {
+            max-width: 450px;
+        }
+    }
+}
+
+.date-box {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+        color: var(--primary-color);
+    }
+}
+
+// Responsive notice card start
+@media(max-width: 767px) {
+    .notice-card .content-area .title {
+        text-align: center;
+    }
+
+    .date-box {
+        justify-content: center;
+    }
+}
+
+// Responsive notice card end
+/*----------------------------------------------
+Notice card section end
 -----------------------------------------------*/
