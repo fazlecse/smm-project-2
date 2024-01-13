@@ -282,21 +282,23 @@
 
          <div class="row">
             <div class="col-12">
-               <div class="card mb-30">
+               <div class="card mb-50">
                   <div class="card-header d-flex align-items-center justify-content-between">
                      <h5 class="mb-0">API Key</h5>
-                     <button class="cmn-btn">Generate Key</button>
+                     <button id="generateBtn" class="cmn-btn">Generate Key</button>
                   </div>
-                  <div class="card-body p-5">
+                  <div class="card-body p-sm-5">
                      <h6>API KEY</h6>
                      <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="CasZPW7KJipdebKhyCcr"
-                           aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-text" id="basic-addon2"><i class="fa-regular fa-copy"></i> copy</span>
+                        <input id="referralURL" type="text" class="form-control" value="CasZPW7KJipdebKhyCcr"
+                           aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                        <div class="input-group-text" id="copyBtn"><i class="fa-regular fa-copy"></i> <span
+                              id="copyBtnText">copy</span></div>
                      </div>
                   </div>
                </div>
-               <div class="card">
+
+               <div class="card mb-50">
                   <div class="card-header">
                      <h5 class="mb-0">API Documentation</h5>
                   </div>
@@ -309,40 +311,445 @@
                            <table class="table table-striped align-middle">
                               <thead>
                                  <tr>
-                                    <th scope="col">HTTP Method</th>
-                                    <th scope="col">POST</th>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
                                  </tr>
                               </thead>
                               <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>HTTP Method</span></td>
+                                    <td data-label="Gateway">
+                                       <span>POST</span>
+                                    </td>
+                                 </tr>
                                  <tr>
                                     <td data-label="Transaction ID"><span>Response format</span></td>
                                     <td data-label="Gateway">
                                        <span>Json</span>
                                     </td>
-                                    
                                  </tr>
                                  <tr>
                                     <td data-label="Transaction ID"><span>API URL</span></td>
                                     <td data-label="Gateway">
-                                       <span>https://demo.smartpanelsmm.com/api/v1</span>
+                                       <span class="text-break">https://demo.smartpanelsmm.com/api/v1</span>
                                     </td>
-                                    
                                  </tr>
                                  <tr>
                                     <td data-label="Transaction ID"><span>API Key</span></td>
                                     <td data-label="Gateway">
-                                       <span>fK6aGhCOXIxz0uRi7KbghLxAkP7z3DPJ</span>
+                                       <span class="text-break">fK6aGhCOXIxz0uRi7KbghLxAkP7z3DPJ</span>
                                     </td>
-                                    
                                  </tr>
-                                 
-
                               </tbody>
                            </table>
                         </div>
                      </div>
                   </div>
                </div>
+
+               <div class="card mb-50">
+                  <div class="card-header">
+                     <h5 class="mb-0">PLACE NEW ORDER</h5>
+                  </div>
+                  <div class="card-body">
+                     <div class="cmn-table">
+                        <div class="table-responsive overflow-hidden">
+                           <table class="table table-striped align-middle">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>key</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Your API key</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>quantity</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Needed quantity</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>action</span></td>
+                                    <td data-label="Gateway">
+                                       <span>add</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>runs <small>(optional)</small></span></td>
+                                    <td data-label="Gateway">
+                                       <span>Runs to deliver</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>service</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Service ID</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>interval <small>(optional)</small></span></td>
+                                    <td data-label="Gateway">
+                                       <span>Interval in minutes</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>link</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Link to page</span>
+                                    </td>
+                                 </tr>
+
+
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+
+                     <div class="card-body">
+                        <h5 class="mb-10">Example response:</h5>
+                        <div class="api-code-box">
+                           <pre>
+{
+   "status": "success",
+   "order": 116
+}
+                        </pre>
+                           <div class="editor-dots">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mb-50">
+                  <div class="card-header">
+                     <h5 class="mb-0">STATUS ORDER</h5>
+                  </div>
+                  <div class="card-body">
+                     <div class="cmn-table">
+                        <div class="table-responsive overflow-hidden">
+                           <table class="table table-striped align-middle">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>key</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Your API key</span>
+                                    </td>
+
+                                 </tr>
+
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>action</span></td>
+                                    <td data-label="Gateway">
+                                       <span>status</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>order</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Order ID</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+
+                     <div class="card-body">
+                        <h5 class="mb-10">Example response:</h5>
+                        <div class="api-code-box">
+                           <pre>
+{
+   "status": "Processing",
+   "charge": "3.60",
+   "start_count": 0,
+   "remains": 0,
+   "currency": "BDT"
+}
+                        </pre>
+                           <div class="editor-dots">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mb-50">
+                  <div class="card-header">
+                     <h5 class="mb-0">MULTIPLE STATUS ORDER</h5>
+                  </div>
+                  <div class="card-body">
+                     <div class="cmn-table">
+                        <div class="table-responsive overflow-hidden">
+                           <table class="table table-striped align-middle">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>key</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Your API key</span>
+                                    </td>
+
+                                 </tr>
+
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>action</span></td>
+                                    <td data-label="Gateway">
+                                       <span>orders</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>orders</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Order IDs separated by comma (array data)</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+
+                     <div class="card-body">
+                        <h5 class="mb-10">Example response:</h5>
+                        <div class="api-code-box">
+                           <pre>
+[
+   {
+      "order": 116,
+      "status": "Processing",
+      "charge": "3.60",
+      "start_count": 10,
+      "remains": 0
+   },
+   {
+      "order": 117,
+      "status": "Completed",
+      "charge": null,
+      "start_count": 0,
+      "remains": 0
+   }
+]
+                        </pre>
+                           <div class="editor-dots">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mb-50">
+                  <div class="card-header">
+                     <h5 class="mb-0">PLACE REFILL</h5>
+                  </div>
+                  <div class="card-body">
+                     <div class="cmn-table">
+                        <div class="table-responsive overflow-hidden">
+                           <table class="table table-striped align-middle">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>key</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Your API key</span>
+                                    </td>
+
+                                 </tr>
+
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>action</span></td>
+                                    <td data-label="Gateway">
+                                       <span>refill</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>order</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Order ID</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+
+                     <div class="card-body">
+                        <h5 class="mb-10">Example response:</h5>
+                        <div class="api-code-box">
+                           <pre>
+{
+   "refill": "1"
+}
+                        </pre>
+                           <div class="editor-dots">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mb-50">
+                  <div class="card-header">
+                     <h5 class="mb-0">STATUS REFILL</h5>
+                  </div>
+                  <div class="card-body">
+                     <div class="cmn-table">
+                        <div class="table-responsive overflow-hidden">
+                           <table class="table table-striped align-middle">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>key</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Your API key</span>
+                                    </td>
+
+                                 </tr>
+
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>action</span></td>
+                                    <td data-label="Gateway">
+                                       <span>refill_status</span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>refill</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Refill ID</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+
+                     <div class="card-body">
+                        <h5 class="mb-10">Example response:</h5>
+                        <div class="api-code-box">
+                           <pre>
+{
+   "status": "Completed"
+}
+                        </pre>
+                           <div class="editor-dots">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mb-50">
+                  <div class="card-header">
+                     <h5 class="mb-0">SERVICE LIST</h5>
+                  </div>
+                  <div class="card-body">
+                     <div class="cmn-table">
+                        <div class="table-responsive overflow-hidden">
+                           <table class="table table-striped align-middle">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Description</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>key</span></td>
+                                    <td data-label="Gateway">
+                                       <span>Your API key</span>
+                                    </td>
+
+                                 </tr>
+
+                                 <tr>
+                                    <td data-label="Transaction ID"><span>action</span></td>
+                                    <td data-label="Gateway">
+                                       <span>services</span>
+                                    </td>
+
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+
+                     <div class="card-body">
+                        <h5 class="mb-10">Example response:</h5>
+                        <div class="api-code-box">
+                           <pre>
+[
+   {
+      "service": 1,
+      "name": "🙋‍♂️ Followers [Ultra-High Quality Profiles]",
+      "category": "🥇 [VIP]\r\n",
+      "rate": "4.80",
+      "min": 100,
+      "max": 10000
+   },
+   {
+      "service": 11,
+      "name": "🧨 Instagram Power Comments (100k+ Accounts) ➡️ [3 Comments]",
+      "category": "💬 Instagram - Verified / Power Comments [ Own Service ]",
+      "rate": "0.60",
+      "min": 500,
+      "max": 5000
+   },
+   {
+      "service": 52,
+      "name": "🎙️ Facebook Live Stream Views ➡️ [ 120 Min ]",
+      "category": "🔵 Facebook - Live Stream Views\r\n",
+      "rate": "57.60",
+      "min": 50,
+      "max": 2000
+   }
+]
+                        </pre>
+                           <div class="editor-dots">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
             </div>
          </div>
       </div>
@@ -358,7 +765,40 @@
    <!-- Footer section end -->
 
 
+   <script>
+      // Generate api key
+      document.getElementById("generateBtn").addEventListener("click", function () {
+         const randomApiKey = generateRandomApiKey(20);
+         document.getElementById("referralURL").value = randomApiKey;
+      })
+      function generateRandomApiKey(length) {
+         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+         let apiKey = '';
 
+         for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            apiKey += characters.charAt(randomIndex);
+         }
+         return apiKey;
+      }
+
+      // Copy api key
+      document.getElementById("copyBtn").addEventListener("click", () => {
+         copyFunction();
+
+      })
+      function copyFunction() {
+         let referralURL = document.getElementById("referralURL");
+         referralURL.select();
+         navigator.clipboard.writeText(referralURL.value)
+         if (referralURL.value) {
+            document.getElementById("copyBtnText").innerText = "Copied";
+            setTimeout(() => {
+               document.getElementById("copyBtnText").innerText = "copy";
+            }, 1000)
+         }
+      }
+   </script>
 
 
 

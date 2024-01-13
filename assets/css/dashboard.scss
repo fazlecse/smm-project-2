@@ -743,7 +743,7 @@ h5 {
 h6 {
     font-size: 16px;
     line-height: 25px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 0;
     color: var(--heading-color);
 }
@@ -792,7 +792,7 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
 
     &:hover {
-        background-color: var(--black);
+        background-color: hsl(var(--base)/.7);
     }
 }
 
@@ -1790,7 +1790,7 @@ Cmn table start
                     font-size: 18px;
                     font-weight: 400;
                     color: var(--heading-color);
-                    padding: 20px 10px;
+                    padding: 15px 10px;
                     text-transform: capitalize;
                     background-color: var(--bg-color4);
 
@@ -3267,7 +3267,7 @@ Header Nav start
 
             h4 {
                 font-size: 16px;
-                font-weight: 500;
+                // font-weight: 500;
                 margin-bottom: 5px;
             }
 
@@ -3289,7 +3289,7 @@ Header Nav start
             h6 {
                 font-size: 18px;
                 margin-bottom: 0;
-                font-weight: 500;
+                // font-weight: 500;
             }
 
             span {
@@ -4569,4 +4569,53 @@ Notice card section start
 // Responsive notice card end
 /*----------------------------------------------
 Notice card section end
+-----------------------------------------------*/
+
+/*----------------------------------------------
+Api code box start
+-----------------------------------------------*/
+
+.api-code-box {
+    position: relative;
+    padding: 50px 20px 20px;
+    border-radius: 10px;
+    background-color: #293340;
+    color: var(--white);
+
+    .editor-dots {
+        position: absolute;
+        top: 20px;
+        height: 12px;
+        margin-left: 20px;
+        width: 12px;
+        min-width: 12px;
+        background-color: #f90;
+        border-radius: 50%;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: -20px;
+            background-color: #18c96e;
+            width: 12px;
+            min-width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 20px;
+            background-color: #b71c1c;
+            width: 12px;
+            min-width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    }
+}
+
+/*----------------------------------------------
+Api code box end
 -----------------------------------------------*/

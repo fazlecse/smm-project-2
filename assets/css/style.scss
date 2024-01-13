@@ -852,7 +852,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0;
 
     &:hover {
-        background-color: var(--black);
+        background-color: hsl(var(--base)/.7);
     }
 }
 
