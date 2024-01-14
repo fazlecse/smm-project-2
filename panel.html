@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialSprint Dashboard</title>
-    <!-- Favicon link -->
+    <title>SocialSprint</title>
+    <!-- Favicon-link -->
     <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
     <!-- Fontawesome-6 Js link -->
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- select2 Css link -->
     <link rel="stylesheet" href="assets/css/select2.min.css">
-    <!-- intlTelInput -Css link -->
-    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
 
 
 
@@ -41,7 +39,6 @@
         </div>
     </div>
     <!-- Preloader section end -->
-
 
     <!-- Nav section start -->
     <nav class="navbar fixed-top navbar-expand-lg">
@@ -240,14 +237,15 @@
     <!-- Bottom Mobile Tab nav section start -->
     <ul class="nav bottom-nav fixed-bottom d-lg-none">
         <li class="nav-item">
-            <a onclick="toggleSideMenu()" class="nav-link toggle-sidebar" aria-current="page"><i
-                    class="fa-light fa-list"></i></a>
+            <a onclick="toggleSideMenu()" class="nav-link toggle-sidebar" aria-current="page">
+                <i class="fa-light fa-list"></i>
+            </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="fa-light fa-house"></i></a>
+            <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
         </li>
         <li class="nav-item">
             <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
@@ -259,99 +257,188 @@
     </ul>
     <!-- Bottom Mobile Tab nav section end -->
 
-    <!--Main section start -->
-    <main id="main" class="main">
-        <div class="row">
-            <div class="col-xxl-8 col-lg-10 mx-auto">
-                <div class="pagetitle">
-                    <h3 class="mb-1">Pay Bill</h3>
-                    <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Pay Bill</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
-                        <h4>Pay Bill</h4>
-                    </div>
-                    <div class="card-body">
-
-                        <form class="paybill-form">
-
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <label for="From-Wallet" class="form-label">From Wallet</label>
-                                    <select class="form-select" id="From-Wallet">
-                                        <option selected>Select wallet</option>
-                                        <option value="1">.form-select USD - US Doller </option>
-                                        <option value="2"> GBP - British pound </option>
-                                        <option value="3"> BTC - BITCOIN </option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="Country" class="form-label">Country & Phone</label>
-                                    <input id="telephone" type="text" class="form-control" name="phone"
-                                        placeholder="Your phone number"
-                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="Services" class="form-label">Services</label>
-                                    <select class="form-select" id="Services">
-                                        <option selected>Select Service</option>
-                                        <option value="1">TIGO VTU</option>
-
-                                    </select>
-                                </div>
-                                <!-- <div class="col-md-6">
-                                    <label for="Mobile-number" class="form-label">Mobile Number</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="text" id="Mobile-number"
-                                            placeholder="Enter Mobile Number"
-                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                    </div>
-                                </div> -->
-                                <div class="col-md-6">
-                                    <label for="Amount" class="form-label">Amount</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="text" id="Amount" placeholder="Enter Amount"
-                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                        <span class="input-group-text" id="basic-addon2">NGN</span>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                            <div class="paybill-form-btn-area">
-                                <a href="user-panel-paybill-confirm.html" type="button"
-                                    class="cmn-btn w-100">continue</a>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-
+    <div class="dashboard-wrapper">
+        <div class="container">
+            <!-- Breadcrumb start -->
+            <div class="breadcrumb-area">
+                <h4 class="title">Order new panel</h4>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home-1.html"><i class="fa-light fa-house"></i>
+                            Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Order new panel</li>
+                </ul>
             </div>
+            <!-- Breadcrumb end -->
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="d-flex align-items-center gap-2"><i class="fa-regular fa-box"></i>Order new panel</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label">Category</label>
+                                    <select class="cmn-select2" name="state">
+                                        <option value="0" hidden>Select Category</option>
+                                        <option value="1">🥇 [VIP]
+                                        </option>
+                                        <option value="2">🔥Cheapest Services On The Market</option>
+                                        <option value="3">💬 Instagram - Verified / Power Comments [ Own Service ]
+                                        </option>
+                                        <option value="4">🔮 TikTok
+                                        </option>
+                                        <option value="5">📺 IGTV Likes</option>
+                                        <option value="6">📦 YouTube - Packages
+                                        </option>
+                                        <option value="7">🛑 YouTube - Watch Hours
+                                        </option>
+                                        <option value="8">🛑 YouTube - Subscribers
+                                        </option>
+                                        <option value="9">🛑 YouTube - Likes / Comments / Shares
+                                        </option>
+                                        <option value="10">🛑 YouTube - Views / Live Stream Views
+                                        </option>
+                                        <option value="11">🛑 YouTube - GEO Targeted Views
+                                        </option>
+                                        <option value="12">📦 Instagram - Packages
+                                        </option>
+                                        <option value="13">💣 Instagram - Followers
+                                        </option>
+                                        <option value="14">💣 Instagram - Likes
+                                        </option>
+                                        <option value="15">💣 Instagram - Views / Comments / Impressions / Saves / Reach
+                                        </option>
+                                        <option value="16">💣 Instagram - Reels
+                                        </option>
+                                        <option value="17">🔵 Facebook - Page Likes / Followers
+                                        </option>
+                                        <option value="18">🔵 Facebook - Post Likes / Emoticons
+                                        </option>
+                                        <option value="19">🔵 Facebook - Views / Comments / Shares
+                                        </option>
+                                        <option value="20">🔵 Facebook - Live Stream Views
+                                        </option>
+                                        <option value="21">♨♣ Top Best Seller ⚑</option>
+                                        <option value="22">♨♣ Cheap Services [Go2Top Panel Cheap Services] ⚑</option>
+                                        <option value="23">♨♣ Web Application Development [Special Enterprise] ⚑
+                                        </option>
+                                        <option value="24">♨♣ Mobile App Development [Special Enterprise] ⚑</option>
+                                        <option value="25">♨♣ E-Commerce Solution [Special Enterprise] ⚑</option>
+                                        <option value="26">♨♣ Logo Design [Special Enterprise] ⚑</option>
+                                        <option value="27">♨♣ Banner Design [Special Enterprise] ⚑</option>
+                                        <option value="28">♨♣ Dynamic Website Development ⚑</option>
+                                        <option value="29">♨♣ Video Production [Special Enterprise] ⚑</option>
+                                        <option value="30">♨♣ SEO - Search Engine Optimization [Special Enterprise] ⚑
+                                        </option>
+                                        <option value="31">♨♣ PPC - Advertising [Special Enterprise] ⚑</option>
+                                        <option value="32">♨♣ Mobile App Promotion [Special Enterprise] ⚑</option>
+                                        <option value="33">♨♣ Podcast Promotion [iTunes &amp; Spotify] ⚑</option>
+                                        <option value="34">♨♣ Instagram Followers [No Refill] ⚑</option>
+                                        <option value="35">♨♣ Instagram Followers [Refill Guarantee] ⚑</option>
+                                        <option value="36">♨♣Instagram Followers REAL Packages⚑</option>
+                                        <option value="37">♨♣ Instagram Followers [Country Targeted] ⚑</option>
+                                        <option value="38">♨♣ Instagram Likes ⚑</option>
+                                        <option value="40">Instagram Data Scraper [Accounts / Links must be Public]
+                                        </option>
+                                        <option value="41">Discord Direct Message</option>
+                                        <option value="42">Twitter Data Scraper [Accounts / Links must be Public]
+                                        </option>
+                                        <option value="43">Twitter Mentions</option>
+                                        <option value="44">Instagram TOP Services [JAP EXCLUSIVE]</option>
+                                    </select>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Category</label>
+                                    <select class="cmn-select2" name="state">
+                                        <option value="" disabled="" selected="">Select Service</option>
+                                        <option value="1">🙋&zwj;♂️ Followers [Ultra-High Quality Profiles]</option>
+                                        <option value="2">👍 Likes - Non Drop </option>
+                                        <option value="3">♻️👍 Auto Likes </option>
+                                        <option value="4">📺 IGTV Likes </option>
+                                    </select>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="link" class="form-label">link</label>
+                                    <input type="text" class="form-control" id="link"
+                                        placeholder="www.example.com/your_profile_identity">
+                                </div>
+                                <div class="col-12">
+                                    <label for="quantity" class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="quantity" value="0">
+                                </div>
+                                <div class="col-12">
+                                    <label for="price" class="form-label">price</label>
+                                    <input type="number" class="form-control" id="price" disabled>
+                                </div>
+                                <div class="col-12">
+                                    <label for="Comments" class="form-label">Comments</label>
+                                    <textarea class="form-control" id="Comments" rows="3"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Yes, i have confirmed the order!">
+                                        <label class="form-check-label" for="Yes, i have confirmed the order!">
+                                            Yes, i have confirmed the order!
+                                        </label>
+                                    </div>
+                                </div>
+                                <a href="" class="cmn-btn mt-30">place order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="d-flex align-items-center gap-2"><i class="fa-duotone fa-notes"></i>Fast Notes</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0">You put the service ID followed by | followed by the link followed by |
+                                followed
+                                by quantity on each line To get the service ID of a service please check here:</p>
+                            <br>
+                            <a href="" class="link">https://Socialsprint.com/services</a>
+                            <p class="mb-0">Let’s say you want to use the Mass Order to add Instagram Followers to your
+                                3
+                                accounts: abcd, asdf, qwer</p>
+                            <br>
+                            <p class="mb-0">From the Services List, the service ID for this service “[Instagram
+                                Followers
+                                [100% Real - 30 Days Guarantee- NEW SERVICE” is 3740</p>
+                            <br>
+                            <p class="mb-0">Let’s say you want to add 1000 followers for each account, the output will
+                                be
+                                like this: ID|Link|Quantity</p>
+                            <br>
+                            <p>or in this example:</p>
+                            <ul>
+                                <li>3740|abcd|1000</li>
+                                <li>3740|abcd|1000</li>
+                                <li>3740|abcd|1000</li>
+                                <li>3740|abcd|1000</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-
-
-    </main>
-    <!--Main section end -->
-
-
+    </div>
 
     <!-- Footer section start -->
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer ms-0">
         <div class="copyright">
             &copy; Copyright <strong><span>SocialSprint Admin</span></strong>. All Rights Reserved
         </div>
-        <div class="credits">
-            Designed by <a href="javascript:void(0)" class="highlight">Bug-Finder</a>
-        </div>
     </footer>
     <!-- Footer section end -->
+
 
 
 
@@ -406,9 +493,28 @@
     </div>
     <!-- Offcanvas sidebar end -->
 
+    <!-- Modal section start -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Modal body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
 
-
-
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
 
 
 
@@ -422,10 +528,8 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2_Js_link -->
     <script src="assets/js/select2.min.js"></script>
-    <!-- select2_Js_link -->
+    <!-- Owl carousel Js link -->
     <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- intlTelInput Js link -->
-    <script src="assets/js/intlTelInput.min.js"></script>
 
 
     <!-- Main Js slink -->

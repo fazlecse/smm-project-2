@@ -68,19 +68,10 @@ Dark theme section start
         color: #d1cbdb;
     }
 
-    .form-control,
-    .form-select {
-        color: var(--white);
-        border: 1px solid var(--bg-color3);
-    }
-
     .form-control:focus {
         color: var(--heading-color);
-        background-color: var(--bg-color3);
+        background-color: var(--input-color);
     }
-
-
-
 
     .cmn-btn3 {
         background-color: var(--bg-color3);
@@ -314,7 +305,7 @@ textarea.form-control {
 }
 
 .form-control {
-    color: var(--black);
+    color: var(--heading-color);
 }
 
 .form-control-color {
@@ -346,7 +337,7 @@ textarea.form-control {
 .form-select:focus {
     box-shadow: 0 0 1rem 0 rgba(140, 152, 164, .25);
     border: 1px solid var(--border-color2);
-    background-color: var(--white);
+    background-color: var(--bg-color1);
 }
 
 .form-check label,
@@ -391,6 +382,27 @@ textarea.form-control {
     border: 1px solid var(--border-color1);
     cursor: pointer;
     text-transform: capitalize;
+}
+
+.rtl {
+
+    .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+    .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+    .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select,
+    .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        border-top-left-radius: .375rem;
+        border-bottom-left-radius: .375rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+    }
 }
 
 // Cmn file input start
@@ -878,7 +890,7 @@ Reusable style section start
         background-color: transparent;
         text-transform: uppercase;
         font-size: 15px;
-        padding: 10px 18px 10px 5px;
+        padding: 10px 15px 10px 5px;
         background-position: right 0px center;
 
         &:focus {
@@ -896,6 +908,16 @@ Reusable style section start
 }
 
 // Responsive language box end
+
+// Rtl language box start
+.rtl {
+    .language-box {
+        .form-select {
+            padding: 10px 5px 10px 15px;
+            background-position: left 0px center;
+        }
+    }
+}
 
 // Rtl language box end
 // Language box end
@@ -1910,7 +1932,7 @@ Cmn table start
         content: attr(data-label);
         font-size: 16px;
         color: var(--black);
-        font-weight: 600;
+        // font-weight: 600;
         text-transform: capitalize;
         margin-right: 20px;
     }
@@ -1919,7 +1941,7 @@ Cmn table start
 
 @media (max-width: 575px) {
     .cmn-btn {
-        padding: 7px;
+        padding: 10px;
     }
 }
 
@@ -1940,9 +1962,32 @@ Cmn table start
     }
 }
 
-.rtl .cmn-table .table-img {
-    margin-right: 0;
-    margin-left: 10px;
+.rtl {
+    .cmn-table {
+        .table thead tr th:first-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .table thead tr th:last-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .table-responsive .table tbody tr td::before {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+
+        .table-img {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
 }
 
 // Rtl cmn tabele end
@@ -2984,7 +3029,8 @@ Padding bottom
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--white);
+        color: var(--heading-color);
+        // background-color: var(--white);
 
         &:hover {
             background-color: var(--primary-color-opacity-low);
@@ -3064,6 +3110,10 @@ Padding bottom
             .nav-link {
                 padding: 15px;
             }
+
+            .dropdown-menu {
+                text-align: center;
+            }
         }
 
         .nav-right {
@@ -3101,17 +3151,24 @@ Padding bottom
         margin-left: 0 !important;
     }
 
-    .navbar .navbar-nav {
-        .nav-link {
-            i {
-                margin-right: 0;
-                margin-left: 5px;
-            }
+    .navbar {
+        .navbar-nav {
+            .nav-link {
+                i {
+                    margin-right: 0;
+                    margin-left: 5px;
+                }
 
-            &.active::after {
-                right: 0;
-                left: auto;
+                &.active::after {
+                    right: 0;
+                    left: auto;
+                }
             }
+        }
+
+        .nav-right {
+            right: auto;
+            left: 65px;
         }
     }
 }
@@ -3237,9 +3294,9 @@ Header Nav start
     }
 
 
-
+    // Notification dropdwon start
     .notifications {
-        // inset: 8px -15px auto auto !important;
+        right: -20px;
         min-width: 310px;
 
         .notification-item {
@@ -3280,6 +3337,16 @@ Header Nav start
 
         }
     }
+
+    // Responsive notification dropdown start
+    @media(max-width: 575px) {
+        .notifications {
+            right: -105px;
+        }
+    }
+
+    // Responsive notification dropdown end
+    // Notification dropdwon start
 
     .profile {
         min-width: 240px;
@@ -3333,6 +3400,7 @@ Header Nav start
     img {
         width: 36px;
         height: 36px;
+        min-width: 36px;
     }
 
     span {
@@ -4616,6 +4684,16 @@ Api code box start
     }
 }
 
+// Api code box rtl start
+.rtl {
+    .api-code-box {
+        .editor-dots {
+            margin-right: 20px;
+        }
+    }
+}
+
+// Api code box rtl end
 /*----------------------------------------------
 Api code box end
 -----------------------------------------------*/
