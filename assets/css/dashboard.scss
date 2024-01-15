@@ -87,10 +87,6 @@ Dark theme section start
         background-color: transparent;
     }
 
-
-
-
-
 }
 
 /*----------------------------------------------
@@ -121,6 +117,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 
@@ -271,7 +268,7 @@ ol {
 
 body {
     font-family: var(--body-font);
-    line-height: 1.5;
+    line-height: 1.4;
     color: var(--body-color);
     font-size: 16px;
     overflow-x: hidden;
@@ -442,6 +439,46 @@ textarea.form-control {
 }
 
 // Cmn file input end
+
+// Cmn radio start
+.cmn-radio {
+    .form-check-input[type=radio]:checked+.form-check-label {
+        background-color: var(--primary-color-opacity-low);
+    }
+
+    .form-check {
+        padding-left: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-check-input {
+        position: absolute;
+        right: 15px;
+        margin: 0;
+    }
+
+    .form-check-label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        cursor: pointer;
+        box-shadow: var(--shadow1);
+        border-radius: 5px;
+        transition: var(--transition);
+        gap: 15px;
+        border: 1px solid var(--border-color1);
+        background-color: var(--bg-color3);
+    }
+}
+
+// Cmn radio end
+.list-group-item{
+    border: 1px solid var(--border-color1);
+}
 /*----------------------------------------------
 intlTelInput section start
 ----------------------------------------------*/
@@ -1340,12 +1377,12 @@ Offcanvas section end
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px solid;
-    border-left: 15px solid;
+    border-left: 10px solid;
     background-color: var(--bg-color2);
-
     // box-shadow: 0px 3px 3px #BABABA;
+
     .icon-area {
         i {
             font-size: 30px;
@@ -1356,7 +1393,7 @@ Offcanvas section end
     .title {
         font-size: 16px;
         text-transform: capitalize;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     .title {
@@ -1373,7 +1410,7 @@ Offcanvas section end
     .btn-close {
         position: absolute;
         top: 50%;
-        right: 30px;
+        right: 10px;
         z-index: 2;
         transform: translateY(-50%);
         padding: 0;
@@ -1417,6 +1454,16 @@ Offcanvas section end
 
     .btn-close {
         color: #E89F29;
+    }
+}
+
+.alert-info {
+    // color: #2E86DE;
+    border-color: #d7e8f9;
+    border-left-color: #2E86DE;
+
+    .btn-close {
+        color: #2E86DE;
     }
 }
 
@@ -1466,6 +1513,11 @@ Offcanvas section end
         border-right-color: #E89F29;
         border-left-color: #FFE8C3;
     }
+
+    // .alert-info {
+    //     border-right-color: #2E86DE;
+    //     border-left-color: #FFE8C3;
+    // }
 }
 
 @media (max-width: 575px) {
@@ -3794,8 +3846,15 @@ Main section start
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
 
-        .card-title {
+        .title {
             margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                color: var(--primary-color);
+            }
         }
     }
 

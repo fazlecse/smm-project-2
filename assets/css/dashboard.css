@@ -100,6 +100,8 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
+  -webkit-appearance: textfield;
+          appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -227,7 +229,7 @@ ol {
 
 body {
   font-family: var(--body-font);
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--body-color);
   font-size: 16px;
   overflow-x: hidden;
@@ -382,6 +384,39 @@ textarea.form-control {
   height: 100%;
   width: 100%;
   opacity: 0;
+}
+
+.cmn-radio .form-check-input[type=radio]:checked + .form-check-label {
+  background-color: var(--primary-color-opacity-low);
+}
+.cmn-radio .form-check {
+  padding-left: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.cmn-radio .form-check-input {
+  position: absolute;
+  right: 15px;
+  margin: 0;
+}
+.cmn-radio .form-check-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: var(--shadow1);
+  border-radius: 5px;
+  transition: var(--transition);
+  gap: 15px;
+  border: 1px solid var(--border-color1);
+  background-color: var(--bg-color3);
+}
+
+.list-group-item {
+  border: 1px solid var(--border-color1);
 }
 
 /*----------------------------------------------
@@ -1149,9 +1184,9 @@ Offcanvas section end
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid;
-  border-left: 15px solid;
+  border-left: 10px solid;
   background-color: var(--bg-color2);
 }
 .alert .icon-area i {
@@ -1161,7 +1196,7 @@ Offcanvas section end
 .alert .title {
   font-size: 16px;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
 }
 .alert .title {
   font-size: 18px;
@@ -1174,7 +1209,7 @@ Offcanvas section end
 .alert-dismissible .btn-close {
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 10px;
   z-index: 2;
   transform: translateY(-50%);
   padding: 0;
@@ -1214,6 +1249,14 @@ Offcanvas section end
 }
 .alert-warning .btn-close {
   color: #E89F29;
+}
+
+.alert-info {
+  border-color: #d7e8f9;
+  border-left-color: #2E86DE;
+}
+.alert-info .btn-close {
+  color: #2E86DE;
 }
 
 @media (max-width: 575px) {
@@ -3073,8 +3116,14 @@ Main section start
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.card .card-header .card-title {
+.card .card-header .title {
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card .card-header .title i {
+  color: var(--primary-color);
 }
 .card .card-body {
   padding: 20px;

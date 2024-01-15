@@ -275,10 +275,63 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="d-flex align-items-center gap-2"><i class="fa-regular fa-box"></i>Order new panel</h4>
+                            <h4 class="title"><i class="fa-regular fa-box"></i>Order new panel
+                            </h4>
                         </div>
                         <div class="card-body">
                             <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="cmn-radio">
+                                        <div class="row g-3">
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault">
+                                                        I have a domain name
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        I want to place panel on subdomain
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="Panel-domain" class="form-label">Panel domain</label>
+                                    <input type="text" class="form-control" id="Panel-domain">
+                                </div>
+                                <div class="col-12">
+                                    <div class="alert alert-info alert-dismissible" role="alert">
+                                        <div class="text-area">
+                                            <div class="mb-10">Please visit your registrar's dashboard and change
+                                                nameservers to:</div>
+                                            <h6>ns1.perfectdns.com</h6>
+                                            <h6>ns2.perfectdns.com</h6>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-info alert-dismissible" role="alert">
+                                        <div class="text-area w-100">
+                                            <div class="mb-10">Please visit your domain's DNS zone editor and
+                                                follow the steps below:</div>
+
+                                            <ol class="list-group list-group-numbered">
+                                                <li class="list-group-item">Select CNAME as the record type.</li>
+                                                <li class="list-group-item">Enter your subdomain in the host/name/alias
+                                                    field.</li>
+                                                <li class="list-group-item">Enter perfectpanel.com in the
+                                                    value/answer/content field.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-12">
                                     <label class="form-label">Category</label>
                                     <select class="cmn-select2" name="state">
@@ -396,7 +449,8 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="d-flex align-items-center gap-2"><i class="fa-duotone fa-notes"></i>Fast Notes</h4>
+                            <h4 class="title"><i class="fa-duotone fa-notes"></i>Fast Notes
+                            </h4>
                         </div>
                         <div class="card-body">
                             <p class="mb-0">You put the service ID followed by | followed by the link followed by |
