@@ -59,7 +59,6 @@ Dark theme section start
     --border-color1: #37333e;
     --border-color2: rgba(234, 219, 215, 0.06);
     --border-color3: #ffffff;
-    --bg-grad-color: #253A33;
     --input-color: #262A2F;
     --body-color: #d1cbdb;
 
@@ -71,6 +70,18 @@ Dark theme section start
     .form-control:focus {
         color: var(--heading-color);
         background-color: var(--input-color);
+    }
+
+    .form-select {
+        background-image: url(../img/accordion/down-arrow-white.png);
+    }
+
+    option {
+        background-color: var(--bg-color1);
+    }
+
+    .dropdown-menu {
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     }
 
     .cmn-btn3 {
@@ -353,13 +364,13 @@ textarea.form-control {
 }
 
 .rtl .form-check {
-    padding-right: 2.5em;
+    padding-right: 1.5em;
     padding-left: 0;
 }
 
 .rtl .form-check-input {
     float: right;
-    margin-right: -2.5em;
+    margin-right: -1.5em;
     margin-left: 0;
 }
 
@@ -464,7 +475,7 @@ textarea.form-control {
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 15px;
+        padding: 15px 35px 15px 15px;
         cursor: pointer;
         box-shadow: var(--shadow1);
         border-radius: 5px;
@@ -475,10 +486,27 @@ textarea.form-control {
     }
 }
 
-// Cmn radio end
-.list-group-item{
-    border: 1px solid var(--border-color1);
+// Rtl cmn radio start
+.rtl {
+    .cmn-radio .form-check {
+        padding-right: 0;
+    }
 }
+
+// Rtl cmn radio end
+
+// Cmn radio end
+.list-group {
+    background-color: var(--bg-color2);
+}
+
+.list-group-item {
+    color: var(--heading-color);
+    border: 1px solid var(--border-color1);
+    background-color: var(--bg-color2);
+
+}
+
 /*----------------------------------------------
 intlTelInput section start
 ----------------------------------------------*/
@@ -551,6 +579,13 @@ intlTelInput end
 // --------------------------------------------------------
 // Select2 start
 // --------------------------------------------------------
+img.img-flag {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color2);
+}
+
 .select2 {
     width: 100% !important;
 }
@@ -571,6 +606,12 @@ intlTelInput end
     padding-right: 10px;
     padding-left: 0;
     color: var(--heading-color);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .select2-container .select2-selection--single:focus,
@@ -616,6 +657,12 @@ intlTelInput end
     padding: 6px 15px;
     border-radius: 5px;
     color: var(--heading-color);
+}
+
+.select2-results__option span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .select2-container--default .select2-results__option--selected {
@@ -1380,6 +1427,7 @@ Offcanvas section end
     border-radius: 10px;
     border: 1px solid;
     border-left: 10px solid;
+    border-right: 2px solid;
     background-color: var(--bg-color2);
     // box-shadow: 0px 3px 3px #BABABA;
 
@@ -1458,7 +1506,7 @@ Offcanvas section end
 }
 
 .alert-info {
-    // color: #2E86DE;
+    color: var(--heading-color);
     border-color: #d7e8f9;
     border-left-color: #2E86DE;
 
@@ -1514,10 +1562,10 @@ Offcanvas section end
         border-left-color: #FFE8C3;
     }
 
-    // .alert-info {
-    //     border-right-color: #2E86DE;
-    //     border-left-color: #FFE8C3;
-    // }
+    .alert-info {
+        border-right-color: #2E86DE;
+        border-left-color: #d7e8f9;
+    }
 }
 
 @media (max-width: 575px) {
@@ -2840,6 +2888,10 @@ Reusable style section end
     padding-bottom: 150px;
 }
 
+.p-10 {
+    padding: 10px;
+}
+
 /*----------------------------------------------
 Padding bottom
 ----------------------------------------------*/
@@ -3170,7 +3222,7 @@ Padding bottom
 
         .nav-right {
             position: absolute;
-            right: 65px;
+            right: 0;
         }
     }
 
@@ -3185,8 +3237,6 @@ Padding bottom
         }
 
         .nav-right {
-            right: 60px;
-
             .custom-nav {
                 gap: 10px;
             }
@@ -3393,7 +3443,7 @@ Header Nav start
     // Responsive notification dropdown start
     @media(max-width: 575px) {
         .notifications {
-            right: -105px;
+            right: -45px;
         }
     }
 
@@ -4525,6 +4575,7 @@ Wideget Section start
 /*----------------------------------------------
 Wideget Section end
 ----------------------------------------------*/
+
 /*----------------------------------------------
 Payment section start
 -----------------------------------------------*/

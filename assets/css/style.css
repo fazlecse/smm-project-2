@@ -4518,10 +4518,6 @@ Policy section start
 .policy-section .policy-section-inner {
   position: relative;
   z-index: 1;
-  box-shadow: var(--shadow1);
-  background-color: var(--white);
-  padding: 70px;
-  border-radius: 5px;
 }
 
 .policy-list {

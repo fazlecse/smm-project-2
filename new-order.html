@@ -44,8 +44,8 @@
     <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar">
+            <button class="navbar-toggler d-none d-lg-block" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <i class="fa-light fa-list"></i>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
@@ -79,11 +79,21 @@
                         <li class="nav-item">
                             <a class="nav-link" href="user-panel-add-fund.html">add found</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">found history</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                history
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="new-order.html">found history</a></li>
+                                <li><a class="dropdown-item" href="user-panel-transection.html">transaction</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">transaction</a>
+                            <a class="nav-link" href="user-panel-notice.html">notice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="panels.html">panels</a>
                         </li>
                     </ul>
                 </div>
