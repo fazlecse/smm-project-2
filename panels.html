@@ -292,28 +292,7 @@
                         <div class="card-body">
                             <form id="panelForm" class="row g-3">
                                 <div class="col-12">
-                                    <!-- <div class="cmn-radio">
-                                        <div class="row g-3">
-                                            <div class="col-12">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                        id="flexRadioDefault" value="content1" checked>
-                                                    <label class="form-check-label" for="flexRadioDefault">
-                                                        I have a domain name
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                        id="flexRadioDefault2" value="content2">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        I want to place panel on subdomain
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+
                                     <div class="cmn-radio">
                                         <div class="row g-3">
                                             <div class="col-12">
@@ -470,7 +449,7 @@
     </div>
 
     <!-- Footer section start -->
-    <footer id="footer" class="footer ms-0">
+    <footer id="footer" class="footer">
         <div class="copyright">
             &copy; Copyright <strong><span>SocialSprint Admin</span></strong>. All Rights Reserved
         </div>
@@ -556,27 +535,6 @@
 
 
 
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById('panelForm');
-            form.addEventListener("change", (event) => {
-                const selectedValue = event.target.value;
-                showContent(selectedValue);
-            })
-
-        })
-        const showContent = (contentId) => {
-            const allContent = document.querySelectorAll(".content");
-            allContent.forEach(content => {
-                content.style.display = "none";
-
-            })
-            const selectedContent = document.getElementById(contentId);
-            if (selectedContent) {
-                selectedContent.style.display = "block";
-            }
-        }
-    </script> -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById('panelForm');
@@ -584,7 +542,6 @@
                 showContent(event.target.value);
             });
             showContent(document.querySelector('input[name="panelType"]:checked').value);
-
         });
 
         const showContent = (contentId) => {

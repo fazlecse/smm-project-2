@@ -292,8 +292,7 @@
                      <div class="input-group mb-3">
                         <input id="referralURL" type="text" class="form-control" value="CasZPW7KJipdebKhyCcr"
                            aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
-                        <div class="input-group-text" id="copyBtn"><i class="fa-regular fa-copy"></i> <span
-                              id="copyBtnText">copy</span></div>
+                        <div class="input-group-text" id="copyBtn"><i class="fa-regular fa-copy"></i>copy</div>
                      </div>
                   </div>
                </div>
@@ -864,20 +863,16 @@
 
       // Copy api key
       document.getElementById("copyBtn").addEventListener("click", () => {
-         copyFunction();
-
-      })
-      function copyFunction() {
          let referralURL = document.getElementById("referralURL");
          referralURL.select();
          navigator.clipboard.writeText(referralURL.value)
          if (referralURL.value) {
-            document.getElementById("copyBtnText").innerText = "Copied";
+            document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-circle-check"></i> Copied';
             setTimeout(() => {
-               document.getElementById("copyBtnText").innerText = "copy";
+               document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-copy"></i>copy';
             }, 1000)
          }
-      }
+      })
    </script>
 
 

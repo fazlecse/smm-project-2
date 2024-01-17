@@ -1717,7 +1717,7 @@ Cmn table start
 }
 @media (max-width: 575px) {
   .cmn-btn {
-    padding: 10px;
+    padding: 7px 15px;
   }
 }
 .rtl .cmn-table-card .search-bar {
@@ -2646,7 +2646,7 @@ Padding bottom
   }
   .navbar .nav-right {
     position: absolute;
-    right: 0;
+    right: 12px;
   }
 }
 @media (max-width: 767px) {
@@ -2672,9 +2672,11 @@ Padding bottom
   right: 0;
   left: auto;
 }
-.rtl .navbar .nav-right {
-  right: auto;
-  left: 65px;
+@media (max-width: 991px) {
+  .rtl .navbar .nav-right {
+    right: auto;
+    left: 12px;
+  }
 }
 
 /*----------------------------------------------
@@ -2932,12 +2934,6 @@ Sidebar start
   background-color: var(--primary-color);
 }
 
-@media (min-width: 1200px) {
-  #main,
-  #footer {
-    margin-left: 300px;
-  }
-}
 @media (max-width: 1199px) {
   .toggle-sidebar .sidebar {
     left: 0;
@@ -3080,13 +3076,6 @@ Sidebar start
   margin-left: 5px;
 }
 
-@media (min-width: 1200px) {
-  .rtl #main,
-  .rtl #footer {
-    margin-right: 300px;
-    margin-left: 0;
-  }
-}
 @media (min-width: 1200px) {
   .rtl.toggle-sidebar #main,
   .toggle-sidebar #footer {
