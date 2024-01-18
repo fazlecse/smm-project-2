@@ -376,7 +376,7 @@ textarea.form-control {
   margin-bottom: 0;
   height: 40px;
   font-weight: 500 !important;
-  background: var(--gradient-bg);
+  background: var(--primary-color);
   border-radius: 5px;
   color: var(--white);
   display: flex;
@@ -548,7 +548,7 @@ img.img-flag {
 }
 
 .select2-container .select2-dropdown {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color3);
   border: 1px solid var(--border-color1);
 }
 
@@ -3227,7 +3227,7 @@ Account settings profile section start
   gap: 5px;
 }
 .account-settings-navbar .nav .nav-link {
-  background-color: var(--white);
+  background-color: var(--bg-color2);
   color: var(--heading-color);
   border-radius: 5px;
   padding: 8px 20px;
@@ -3245,7 +3245,7 @@ Account settings profile section start
 }
 .account-settings-navbar .nav .nav-link.active {
   color: var(--white);
-  background: var(--gradient-bg);
+  background: var(--primary-color);
   box-shadow: var(--shadow2);
 }
 .account-settings-navbar .nav .nav-link.active:hover {
